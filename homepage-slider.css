@@ -1,0 +1,414 @@
+@media only screen and (min-width:1120px) {
+    section.content-100 {
+        width: 100%;
+        position: relative;
+        display: block;
+        margin: 20px auto 40px !important;
+        overflow: hidden;
+        padding-left: 0em !important;
+        padding-right: 0em !important;
+    }
+    section #slides .slidesjs-container,
+    section #slides .slidesjs-control {
+        width: 100%!important
+    }
+    section #slides .slidesjs-navigation,
+    section #slides .slidesjs-pagination {
+        display: none
+    }
+    section #slides .slide-element {
+        width: 15.375%!important;
+        position: relative!important;
+        display: block!important;
+        left: 0!important;
+        margin-right: .25%
+    }
+    section #slides .slide-element:last-child {
+        margin-right: 0!important
+    }
+    section #slides .slide-element:last-child .slide-text {
+        border-right: 0
+    }
+    section #slides .slide-element .slide-image {
+        opacity: .8;
+        transition: all ease .35s;
+        -webkit-transition: all ease .35s;
+        background-size: auto 100%;
+        height: 640px;
+    }
+    section #slides .slide-element .slide-text {
+        box-sizing: border-box;
+        display: table;
+        width: 100%;
+        position: relative;
+        border-right: 2px dotted #fbc1ad;
+        height: 240px;
+        padding-left: 7px;
+    }
+    section #slides .slide-element .slide-text h2 {
+        font-size: 1.1rem;
+    }
+    section #slides .slide-element .slide-text .col-12 {
+        width: 100%;
+        float: left;
+        box-sizing: border-box;
+        position: relative;
+        margin-left: 0;
+        margin-top: 0;
+        left: 0;
+        padding: 20px 0 15px 0;
+        border: none;
+        background: none
+    }
+    section #slides .slide-element .slide-text .col-6 {
+        width: 100%;
+        float: left;
+        padding: 0 7px 0 0;
+        box-sizing: border-box
+    }
+    section #slides .slide-element .slide-text .col-6 h2 {
+        min-width: 160px;
+        max-width: 160px
+    }
+    section .slide-element .slide-text .abstract .button-slider {
+        margin-top: 0px !important;
+    }
+    section #slides .slide-element .slide-text .col-8 {
+        width: 100%;
+        float: right;
+        margin-right: 7px;
+        box-sizing: border-box
+    }
+    section #slides .slide-element .slide-text .slide-category {
+        color: #fbc1ad;
+        background: none;
+        padding: 0;
+        min-width: none;
+        text-align: left;
+    }
+    section #slides .slide-element .slide-text .abstract {
+        display: none;
+        opacity: 0
+    }
+    section #slides .slide-element:hover {
+        cursor: pointer
+    }
+    section #slides .slide-element:hover .slide-image {
+        opacity: 1
+    }
+    section #slides .slide-element.active-slide {
+        width: 37.5%!important;
+        opacity: 1;
+    }
+    section #slides .slide-element.active-slide .slide-image {
+        opacity: 1
+    }
+    section #slides .slide-element.active-slide .slide-text {
+        text-align: left!important;
+        transition: all ease .25s;
+        -webkit-transition: all ease .5s;
+    }
+    section #slides .slide-element.active-slide .slide-text .col-4 {
+        width: 31.3333%;
+        padding-right: 3%
+    }
+    section #slides .slide-element.active-slide .slide-text .col-6 {
+        width: 50%;
+        padding-right: 3%
+    }
+    section #slides .slide-element.active-slide .slide-text .col-8 {
+        width: 62.6666%
+    }
+    section #slides .slide-element.active-slide .slide-text .slide-category,
+    section #slides .slide-element.active-slide .slide-text h2 {
+        text-align: left
+    }
+    section #slides .slide-element.active-slide .slide-text .abstract {
+        opacity: 1;
+        display: block
+    }
+    .fadeIn {
+        -webkit-animation-name: a;
+        animation-name: a;
+        animation-duration: 1.5s
+    }
+    @-webkit-keyframes a {
+        0% {
+            opacity: 0
+        }
+        to {
+            opacity: 1
+        }
+    }
+    @keyframes a {
+        0% {
+            opacity: 0
+        }
+        to {
+            opacity: 1
+        }
+    }
+}
+
+@media only screen and (min-width:1500px) {
+  section #slides .slide-element .slide-text h2 {
+      font-size: 1.25rem;
+  }
+}
+
+@font-face {
+    font-family: Hochzeitswahn;
+    src: url(sass/webfonts/hwicons/fonts/Hochzeitswahn.eot);
+    src: url(sass/webfonts/hwicons/fonts/Hochzeitswahn.eot?#iefix) format("embedded-opentype"), url(sass/webfonts/hwicons/fonts/Hochzeitswahn.woff) format("woff"), url(sass/webfonts/hwicons/fonts/Hochzeitswahn.ttf) format("truetype"), url(sass/webfonts/hwicons/fonts/Hochzeitswahn.svg#Flaticon) format("svg");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: AireBoldStd;
+    src: url(sass/webfonts/aire-web/webfonts/2DB690_0_0.eot);
+    src: url(sass/webfonts/aire-web/webfonts/2DB690_0_0.eot?#iefix) format("embedded-opentype"), url(sass/webfonts/aire-web/webfonts/2DB690_0_0.woff2) format("woff2"), url(sass/webfonts/aire-web/webfonts/2DB690_0_0.woff) format("woff"), url(sass/webfonts/aire-web/webfonts/2DB690_0_0.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Bryant Condensed;
+    src: url(sass/webfonts/bryant-web/BryantWebLightCondensed.eot);
+    src: url(sass/webfonts/bryant-web/BryantWebLightCondensed.eot?#iefix) format("embedded-opentype"), url(sass/webfonts/bryant-web/BryantWebLightCondensed.woff) format("woff"), url(sass/webfonts/bryant-web/BryantWebLightCondensed.ttf) format("truetype");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Bryant Condensed;
+    src: url(sass/webfonts/bryant-web/BryantWebRegularCondensed.eot);
+    src: url(sass/webfonts/bryant-web/BryantWebRegularCondensed.eot?#iefix) format("embedded-opentype"), url(sass/webfonts/bryant-web/BryantWebRegularCondensed.woff) format("woff"), url(sass/webfonts/bryant-web/BryantWebRegularCondensed.ttf) format("truetype");
+    font-weight: 300;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Bryant Condensed;
+    src: url(sass/webfonts/bryant-web/BryantWebMediumCondensed.eot);
+    src: url(sass/webfonts/bryant-web/BryantWebMediumCondensed.eot?#iefix) format("embedded-opentype"), url(sass/webfonts/bryant-web/BryantWebMediumCondensed.woff) format("woff"), url(sass/webfonts/bryant-web/BryantWebMediumCondensed.ttf) format("truetype");
+    font-weight: 500;
+    font-style: normal
+}
+
+section.content-100 {
+    width: 100%;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin: 0px auto 10px;
+}
+
+section .slidesjs-pagination {
+  padding: 0;
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  margin-left: -55px;
+  top: 0;
+  margin-bottom: 0;
+}
+
+section .slidesjs-pagination li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+    width: 12px;
+    height: 12px
+}
+
+section .slidesjs-pagination li a {
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 6px;
+    background-color: #fff
+}
+
+section .slidesjs-pagination li a.active {
+    background-color: #fbc1ad
+}
+
+section .slidesjs-container {
+    padding-bottom: 20px
+}
+
+section .slidesjs-navigation {
+  position: absolute;
+  text-align: center;
+  opacity: 0.5;
+  display: none;
+  background-repeat: no-repeat;
+  font-family: Hochzeitswahn;
+  text-decoration: none;
+  font-size: 20px;
+  z-index: 10;
+  color: #fff;
+}
+
+section .slidesjs-navigation:hover {
+  opacity: 1;
+}
+
+section .slidesjs-navigation.slidesjs-next {
+  right: 20px;
+}
+
+section .slidesjs-navigation.slidesjs-next:before {
+    content: '\23'
+}
+
+section .slidesjs-navigation.slidesjs-previous {
+  left: 20px;
+}
+
+section .slidesjs-navigation.slidesjs-previous:before {
+    content: '\22'
+}
+
+section .slide-element {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    transition: width linear .25s;
+    -webkit-transition: width linear .25s
+}
+
+section .slide-element .slide-image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    display: block;
+    height: 300px;
+    z-index: -1;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden
+}
+
+section .slide-element .slide-text {
+    position: relative;
+    display: block
+}
+
+section .slide-element .slide-text h2 {
+    font-family: AireBoldStd, serif;
+    line-height: 1.4em;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin: 0;
+    display: block
+}
+
+section .slide-element .slide-text .col-12 {
+    position: relative;
+    display: table;
+    width: auto;
+    margin: 0 auto;
+    margin-top: -17px;
+    padding: 3px;
+    border: 1px solid #fbc1ad;
+    background: hsla(0, 0%, 100%, .5)
+}
+
+section .slide-element .slide-text .col-12 .slide-category {
+    font-family: Bryant Condensed;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: .1em;
+    box-sizing: border-box;
+    background: #fbc1ad;
+    color: #fff;
+    padding: 7px 10px 5px;
+    min-width: 100px;
+    text-align: center;
+}
+
+section .slide-element .slide-text .col-4 {
+    padding: 30px 12px 5px
+}
+
+section .slide-element .slide-text .col-6 {
+    padding: 30px 12px 5px
+}
+
+section .slide-element .slide-text .col-6.abstract {
+    padding: 0 12px 10px
+}
+
+
+section .slide-element .slide-text .col-8 {
+    padding: 0 12px 10px
+}
+
+section .slide-element .slide-text .abstract p {
+    font-family: Bryant Condensed;
+    font-weight: 300;
+    line-height: 1.4em;
+    letter-spacing: .1em;
+    font-size: 16px;
+    margin: 5px 0 20px
+}
+
+section .slide-element .slide-text .abstract a.button-slider {
+    background-color: #fbc1ad;
+    color: #fff;
+    padding: 8px 15px 6px;
+    font-family: Bryant Condensed;
+    font-weight: 300;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: table;
+    position: relative;
+    -webkit-transition: all ease .35s;
+    transition: all ease .35s;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+section .slide-element .slide-text .abstract a.button-slider:after {
+    font-family: Hochzeitswahn;
+    font-size: 12px;
+    margin-left: 7px;
+    content: '\23'
+}
+
+section .slide-element .slide-text .abstract a.button-slider:hover {
+    background-color: #e6ac92
+}
+
+
+
+/*** OIO WERBEBANNER ***/
+
+#oio-banner-3 .oio-slot {
+  width: 100% !important;
+  padding-bottom: 0 !important;
+}
+
+#oio-banner-3 a {
+  max-width: 100% !important;
+}
+
+.home #oio-banner-3 .oio-slot {
+  margin: 0 auto 40px !important;
+}
+
+.ad-section.ad-2col.nomargin {
+  margin-top: 0;
+  margin-bottom: 0;
+}

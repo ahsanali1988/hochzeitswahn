@@ -1,0 +1,96 @@
+//**** ---- ****
+//
+// Basic settings
+//
+//**** ---- ****
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+/*! Typebase.less v0.1.0 | MIT License */
+
+html, body {
+  font-family: $body-font-family;
+  font-size: $base-font-size / 16 * 100%;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: $paragraph-text-rendering;
+  background-color: $white;
+  line-height: $base-line-height;
+  font-weight: $paragraph-font-weight;
+  color: $black;
+  padding: 0;
+  margin: 0;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba($primary-color, .2);
+}
+
+.skip-link {
+  display: none;
+}
+
+
+// Site wide styles
+// --------------------------------
+.site-header, .site-content, .site-footer-wrapper {
+  @include center($max_width: 93em, $pad: 1em);
+}
+
+
+// Helper classes
+// --------------------------------
+.small-only {
+  @media only screen and (min-width: $large-min) {
+    display: none;
+  }
+}
+
+.medium-up {
+  @media only screen and (max-width: $small-max) {
+    display: none;
+  }
+}
+
+.large-only {
+  @media only screen and (max-width: $medium-max) {
+    display: none;
+  }
+  @media only screen and (min-width: $large-min) {
+    display: block;
+  }
+}
+
+.large-hidden {
+  @media only screen and (min-width: $large-min) {
+    display: none;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.align-center, .aligncenter {
+  text-align: center;  
+}
+
+.align-left, .alignleft {
+  text-align: left;  
+}
+
+.align-right, .alignright {
+  text-align: right;  
+}
+
+img.align-center, img.aligncenter {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

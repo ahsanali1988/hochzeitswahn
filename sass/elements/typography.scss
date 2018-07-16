@@ -1,0 +1,360 @@
+//**** ---- ****
+//
+// Typography
+//
+//**** ---- ****
+
+
+// Paragraphs
+// --------------------------------
+p {
+  font-size: $paragraph-font-size;
+  line-height: $base-line-height;
+  margin-top: 0;
+  margin-bottom: #{$base-line-height}em;
+}
+
+strong {
+  font-weight: 500 !important;
+}
+
+em {
+  font-style: italic;
+}
+
+
+// Anchor Tags
+// --------------------------------
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+p a {
+  color: $primary-color-dark;
+  
+  &:hover {
+    color: darken($primary-color-dark, 10%);
+  }
+}
+
+
+// Headlines
+// --------------------------------
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: #{$base-line-height/2}em;
+  line-height: $base-line-height;
+
+  small {
+    display: block;
+    font-size: 70%;
+    line-height: 1.5em;
+    margin-top: 1em;
+  }    
+}
+
+h1 {
+  font-size: $h1-font-size;
+  line-height: $h1-line-height;
+  margin-bottom: $h1-margin-bottom;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  line-height: $h2-line-height;
+  margin-bottom: $h2-margin-bottom;
+  text-transform: uppercase;  
+}
+
+h3 {
+  font-size: $h3-font-size;
+  line-height: $h3-line-height;
+  margin-bottom: $h3-margin-bottom;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  line-height: $h4-line-height;  
+  margin-bottom: $h4-margin-bottom;  
+  //font-weight: bold;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  line-height: $h5-line-height;  
+  margin-bottom: $h5-margin-bottom;  
+  //font-weight: bold;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  line-height: $h6-line-height;
+  margin-bottom: $h6-margin-bottom;     
+  //font-weight: bold;
+}
+
+@media screen and (max-width: $medium-max) {
+  h1 {font-size: $h2-font-size; line-height: $h2-line-height; margin-bottom: $h2-margin-bottom;}
+  h2 {font-size: $h3-font-size; line-height: $h3-line-height; margin-bottom: $h3-margin-bottom;}
+  h3 {font-size: $h4-font-size; line-height: $h4-line-height; margin-bottom: $h4-margin-bottom;}
+  h4 {font-size: $h5-font-size; line-height: $h5-line-height; margin-bottom: $h5-margin-bottom;}
+  h5 {font-size: $h6-font-size; line-height: $h6-line-height; margin-bottom: $h6-margin-bottom;}
+  h6 {font-size: $paragraph-font-size; line-height: $base-line-height; margin-bottom: $base-line-height;}
+}
+
+@media screen and (max-width: $small-max) {
+  h1 {font-size: $h3-font-size; line-height: $h3-line-height; margin-bottom: $h3-margin-bottom;}
+  h2 {font-size: $h4-font-size; line-height: $h4-line-height; margin-bottom: $h4-margin-bottom;}
+  h3 {font-size: $h5-font-size; line-height: $h5-line-height; margin-bottom: $h5-margin-bottom;}
+  h4 {font-size: $h6-font-size; line-height: $h6-line-height; margin-bottom: $h6-margin-bottom;}
+  h5 {font-size: $h6-font-size; line-height: $h6-line-height; margin-bottom: $h6-margin-bottom;}
+  h6 {font-size: $paragraph-font-size; line-height: $base-line-height; margin-bottom: $base-line-height;}
+}
+
+.section-headline {
+  font-family: $body-font-family;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-weight: 100;
+  
+  span {
+    background-color: $white;
+    display: inline-block;
+    max-width: 85%;
+    padding-left: 1em;
+    padding-right: 1em;
+    position: relative;
+    z-index: 1;
+    
+    @media only screen and (max-width: $small-max) {
+      padding-left: .5em;
+      padding-right: .5em;
+    }
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid $secondary-color;
+    top: 40%
+  }
+}
+
+
+// Lists
+// --------------------------------
+ul, ol {
+  margin-top: 0;
+  margin-bottom: #{$base-line-height}em;
+  
+  li {
+    line-height: $base-line-height;
+  }
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+ul.unstyled {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+// Buttons
+// --------------------------------
+.button, button:not(.off-canvas-toggle):not(.slick-prev):not(.slick-next) {
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;  
+  padding: .35em 1em;
+  font-size: 1.125em;
+  position: relative;
+  z-index: 0;
+  margin-bottom: .5em;
+  line-height: 1.25;
+  text-align: center;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($white, 0.77);
+    border: 1px solid $primary-color;
+    padding: .35em;
+    box-sizing: content-box;
+    left: -0.395em;
+    top: -0.395em;
+  }
+  
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #f5c1aa;
+    margin: .35em;
+    left: -0.35em;
+    top: -0.35em;
+    transition: background-color 300ms ease;
+  }
+  
+  &:hover:after {
+    border-color: $primary-color-dark;
+    background-color: $primary-color-dark;
+  }  
+}
+
+
+// Quotes and Misc
+// --------------------------------
+blockquote {
+  margin-top: #{$base-line-height/2}em;
+  margin-bottom: #{$base-line-height/2}em;
+  position: relative;
+  //color: darken($secondary-color-dark, 25%);
+  text-transform: uppercase;
+  font-family: $body-font-serif;
+  padding-left: 1em;
+  padding-right: 1em;  
+  font-size: 1.25em;
+  
+  &:before {
+    content: '\2b';
+    font-family: 'Hochzeitswahn';
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+		-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    left: -0.5em;
+    top: 0;
+  }
+  
+  * {
+    line-height: 1.4;
+    font-style: normal;
+    font-weight: 300;
+  }
+  
+  @media only screen and (min-width: $large-min) {
+    font-size: 1.5em;
+  }
+
+  @media only screen and (min-width: $large-max) {
+    font-size: 1.6875em;
+  }
+  
+}
+
+.ngg-singlepic.ngg-none {
+  width: 980px
+} 
+
+
+// Tables
+// -------------------------------_
+table {
+  margin-bottom: $base-line-height;
+  border-spacing: 0px;
+  border-collapse: collapse;
+
+  td,
+  th {
+    padding: 0;
+    line-height: $base-line-height * $base-font-size - 0px;
+  }
+}
+
+
+// Typo on Content pages
+// --------------------------------
+.content-page {
+
+  // Headlines
+  // --------------------------------  
+  h1 {font-size: 2.2500rem; font-family: $body-font-serif;  font-weight: normal; margin-bottom: #{$base-line-height/2}rem; }
+  h2 {font-size: 2.2500rem; font-family: $body-font-family; font-weight: 100;    margin-bottom: #{$base-line-height/2}rem; }
+  h3 {font-size: 1.6875rem; font-family: $body-font-serif;  font-weight: normal; margin-bottom: #{$base-line-height/2}rem; }
+  h4 {font-size: 1.6875rem; font-family: $body-font-family; font-weight: 300;    margin-bottom: #{$base-line-height/2}rem; }
+  h5 {font-size: 1.5000rem; font-family: $body-font-serif;  font-weight: normal; margin-bottom: #{$base-line-height/2}rem; }
+  h6 {font-size: 1.5000rem; font-family: $body-font-family; font-weight: 300;    margin-bottom: #{$base-line-height/2}rem; }
+  
+  //@media screen and (max-width: $medium-max) {
+  //  h1 {}
+  //  h2 {}
+  //  h3 {}
+  //  h4 {}
+  //  h5 {}
+  //  h6 {}
+  //}
+  //
+  //@media screen and (max-width: $small-max) {
+  //  h1 {}
+  //  h2 {}
+  //  h3 {}
+  //  h4 {}
+  //  h5 {}
+  //  h6 {}
+  //}
+
+  // Orderd Lists
+  // --------------------------------
+  ul {
+    padding-left: 1rem;    
+  }
+  
+  ol {
+    counter-reset: listed;  
+    list-style-type: none;
+    padding-left: 2rem;
+    
+    li {
+      padding: 1em 1em 1em .25em;
+      margin-bottom: 0;
+      position: relative;
+      
+      &:before {
+        counter-increment: listed;      
+        content: counters(listed,".");  
+        display: block;
+        position: absolute;
+        left: -0.9em;
+        font-size: 1.675rem;
+        color: $primary-color-dark;
+        line-height: 1.6rem;
+      }
+    }
+  }
+
+  ul a, ol a {
+    color: $primary-color-dark;
+    
+    &:hover {
+      color: darken($primary-color-dark, 15%);
+    }
+  }
+  
+}

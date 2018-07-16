@@ -1,0 +1,190 @@
+//**** ---- ****
+//
+// Ads
+//
+//**** ---- ****
+
+
+// Defaults
+// --------------------------------
+.ad-section {
+  clear: both;
+  margin-top: 3.25em;
+  margin-bottom: 3.25em;
+  
+  > ins,
+  .sponsoring > a img,
+  .sponsoring > ins {
+    border: 1px solid #ececec !important; 
+  }
+  
+  ul.oio-banner-zone li.oio-slot {
+    height: auto !important; 
+    
+    a {
+      display: inline-block !important;
+      position: relative !important;
+    }
+    
+    img {
+      position: relative !important;
+      border: 1px solid #ececec !important; 
+    }
+  }
+  
+  div[class^="ad-small-"] img {
+    max-height: 100px;
+  }
+  
+  div[class^="ad-medium-"] img {
+    max-height: 250px;
+  }  
+}
+
+.blog .ad-section {
+  margin-bottom: 4.25em;
+  
+  &:after {
+    content: '';
+    clear: both;
+    display: block;
+    width: 0;
+    height: 0;
+  }
+}
+
+// Leaderboard
+// --------------------------------
+.ad-leaderboard {
+  text-align: center;
+  overflow: hidden;
+  
+  ins, iframe {
+    max-width: 100%;
+  }
+}
+
+
+// Ad 2col
+// --------------------------------
+.ad-2col {
+
+  ul.oio-banner-zone li.oio-slot {
+    height: auto !important; 
+    text-align: center !important;
+    margin-bottom: 0.333rem !important;
+    padding-bottom: 0 !important;
+    
+    a {
+      display: inline-block !important;
+      position: relative !important;
+      max-width: 300px !important;
+    }
+    
+    img {
+      max-width: 100%;
+      position: relative !important;
+      margin-bottom: 1.5rem !important;
+    }
+  } 
+  
+  @media only screen and (min-width: $medium-min) {
+    overflow: hidden;
+    
+    > div {
+      @include col(1/2, $gutter: 3);
+    }    
+    
+    ul.oio-banner-zone li.oio-slot {
+      width: 50% !important;
+    }
+  }
+  
+  &.below-comments {
+    margin-top: 6.5rem;
+  }   
+}
+
+
+// Modula A ads
+// --------------------------------
+.module-a-aside .ad-section {
+  text-align: center;  
+  margin-bottom: 2.25em;
+  
+  .section-headline {
+    margin-bottom: 0.75em;
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    .ad-small-three div ul.oio-banner-zone li.oio-slot {
+      width: 100% !important;
+      min-width: 100% !important;
+      height: auto !important; 
+      text-align: center !important;
+      margin-bottom: 0.8rem !important;
+      padding-bottom: 0 !important;
+      
+      a {
+        display: inline-block !important;
+        position: relative !important;
+        max-width: 300px !important;
+      }
+      
+      img {
+        max-width: 100%;
+        position: relative !important;
+      }
+    }  
+  }
+}
+
+
+// Module C ads
+// --------------------------------
+.module-c-aside {
+  overflow: hidden;
+  
+  .section-headline {
+    margin-bottom: 0.75em;
+  }
+  
+  .ad-section {
+    text-align: center;  
+    margin-top: 0;
+  
+    @media only screen and (min-width: $medium-min) {
+      @include col(1/2, $gutter: 1);
+      margin-bottom: 0;
+      text-align: center;
+    }
+    
+    img:first-child {
+      margin-bottom: 1.5em;
+    }
+  }
+  
+  .ad-section div ul.oio-banner-zone li.oio-slot {
+    width: 100% !important;
+    min-width: 100% !important;
+    height: auto !important; 
+    text-align: center !important;
+    margin-bottom: 0.333rem !important;
+    padding-bottom: 0 !important;
+    
+    a {
+      display: inline-block !important;
+      position: relative !important;
+      max-width: 300px !important;
+    }
+    
+    img {
+      max-width: 100%;
+      position: relative !important;
+      margin-bottom: 1.5rem !important;
+    }
+  }  
+}

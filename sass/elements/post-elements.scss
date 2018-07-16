@@ -1,0 +1,181 @@
+//**** ---- ****
+//
+// Post elements
+//
+//**** ---- ****
+
+
+// Entry Thumbs
+// --------------------------------
+.entry-thumbnail {
+  img {
+    display: block;
+    min-width: 100%;
+  }  
+}
+
+
+// Category list
+// --------------------------------
+.cat-links {
+  display: block;
+  margin-bottom: 1em;
+  font-size: 0.75em;
+  color: $primary-color-dark;
+  text-align: center;
+  text-transform: uppercase;
+  
+  a:hover {
+    color: darken($primary-color-dark, 10%);
+  }
+  
+  &:before, &:after {
+    content: '';
+    display: inline-block;
+    position: relative;
+    top: -3px;
+    width: 1.5em;
+    height: 1px;
+    border-bottom: 1px solid $secondary-color;
+    margin-right: .5em;
+  }
+  
+  &:after {
+    margin-right: auto;
+    margin-left: .5em;
+  }
+}
+
+
+// Entry Meta
+// --------------------------------
+.entry-meta {
+  margin-top: -2em;
+  
+  .meta-wrapper {
+    color: #fff;
+    display: inline-block;
+    padding: 0;
+    margin-bottom: 1.5em;
+    position: relative;
+    z-index: 0;
+    
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($white, 0.77);
+      border: 1px solid $primary-color;
+      padding: .5em;
+      box-sizing: content-box;
+      top: -0.5em;
+      left: -0.5em;
+    }
+  }
+  
+  .meta-content-output {
+    background-color: $primary-color;
+  }
+  
+  .posted-on {
+    display: inline-block;
+    width: 28%;
+    text-align: center;
+    padding: .25em .5em;
+    text-transform: uppercase;
+    line-height: 1;
+    border-right: 1px solid #fff;
+    
+    strong {
+      font-size: 1.3125em;
+      letter-spacing: 1px;
+    }
+  }
+  
+  .sharing-options {
+    display: inline-block;
+    width: 72%;
+    
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+      padding-left: 0;
+      
+      li {
+        display: inline;
+      }
+    }
+  }
+  
+  .essb_links.essb_template_light-retina {
+    margin: 0;
+    display: inline-block;
+    line-height: 1.5;
+    vertical-align: text-bottom;
+  }
+  
+  .essb_links.essb_template_light-retina .essb_hide_name li a, 
+  .essb_links.essb_template_light-retina .essb_force_hide li a {
+    padding-left: .35em;
+    padding-right: .35em;
+  }
+}
+
+
+// Entry content
+// --------------------------------
+.entry-content {
+  padding: .5em;
+  text-align: center;
+  background: #fbfafa;
+  border: 1px solid #ededed;
+  
+  .entry-title {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    //hyphens: auto;
+    
+    @media only screen and (min-width: $large-min) {
+      padding: 0 1.25em;
+      min-height: 5.25em;
+    }
+    @media only screen and (min-width: 72em) {
+      min-height: 4.25em;
+    }    
+  }
+}
+
+
+// Entry Colors
+// --------------------------------
+a[class^="colorfilter-"], a[class*=" colorfilter-"] {
+  display: inline-block;
+  width: .75em;
+  height: .75em;
+  background-color: #000;
+  border-radius: 50%;
+  margin-left: .75em;
+}
+
+a.colorfilter-schwarz {background-color: #252525;}
+a.colorfilter-weiss {background-color: #f4f4f4; border: 1px solid #eee;}
+a.colorfilter-gelb {background-color: #e6d052;}
+a.colorfilter-blau {background-color: #3e81ce;}
+a.colorfilter-rot {background-color: #b81a1a;}
+a.colorfilter-orange {background-color: #cc7037;}
+a.colorfilter-gold {background-color: #c8a961;}
+a.colorfilter-silber {background-color: #9e9e9e;}
+a.colorfilter-lila {background-color: #9646b5;}
+a.colorfilter-gruen {background-color: #27a627;}
+a.colorfilter-pink {background-color: #ce3773;}
+a.colorfilter-rosa {background-color: #E5B1B1;}
+
+
+// Video plugin elements
+// --------------------------------
+.arve-btn-close {
+  display: none !important;
+}

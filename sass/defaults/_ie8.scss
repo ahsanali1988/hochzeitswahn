@@ -1,0 +1,38 @@
+$primary-color:   #0c3844;
+$secondary-color: #4EC5E6;
+$third-color:     #4EE695;
+
+$alert-color:     #f04124;
+$success-color:   #43AC6A;
+$warning-color:   #f08a24;
+$info-color:      #a0d3e8;
+
+$gray:            #454545;
+$white:           #ffffff;
+$black:           #222222;
+
+html.lt-ie9, html.lt-ie9.js {
+  body {
+    opacity: 1;
+    &:before {
+      content: 'Wir bei Falcon White m\00F6 chten Ihnen auf unserer Seite die modernen M\00F6 glichkeiten des Webs zeigen. Daher k\00F6 nnen wir leider nicht den 5 Jahre alten IE8 unterst\00FC tzen. Wir bitten Sie daher mit einem sicheren, modernen Browser wie IE9+, Firefox, Chrome, Safari oder Opera diese Seite zu besuchen. Es lohnt sich. Vielen Dank.';
+      display: block;
+      position: fixed;
+      top:0;
+      left:0;
+      width: 100%;
+      z-index: 150;
+      text-align: center;
+      background: $primary-color;
+      color: $white;
+      padding:2em 18%;
+    }
+  }
+  .fw-loading {
+    display: none;
+  }
+}
+
+.no-inlinesvg a.logo {
+  display: none;
+}

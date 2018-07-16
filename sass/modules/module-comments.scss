@@ -1,0 +1,220 @@
+//**** ---- ****
+//
+// Comment Section
+//
+//**** ---- ****
+
+
+// Comments
+// --------------------------------
+.comments-area {
+  overflow: hidden;
+  
+  @media only screen and (min-width: $large-min) {
+    .comments-wrapper {
+      @include col(4/6, $gutter: 12);
+    }
+    
+    .ad-section {
+      @include col(2/6, $gutter: 12);
+    }
+  }
+  
+  .ad-section {
+   text-align: center;
+  }  
+}
+
+.comments-area {
+  strong {
+    font-weight: 300;
+    font-size: 1.3125em;
+  }
+  
+  .commentform-anchor {
+    color: $primary-color-dark;
+    display: block;
+    
+    &:hover {
+      color: darken($primary-color-dark, 15%);
+    }
+    
+    &:after {
+      content: '\23';
+      font-family: 'Hochzeitswahn';
+      display: inline-block;
+      margin-left: .5em;
+      font-size: .5em;    
+    }
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    .commentform-anchor {
+      float: right;
+      display: inline;
+    }
+  }
+  
+  .ad-section {
+    margin-top: 1.75em;
+
+    ul.oio-banner-zone li.oio-slot img {
+      max-width: 300px !important;
+      margin-bottom: 1.5rem !important;
+      display: inline-block !important;
+    }
+  }
+}
+
+// Comment List
+// --------------------------------
+.comment-list {
+  border-top: 1px solid $secondary-color;
+  margin-top: .5em;
+  padding-left: 1.75em;
+  overflow: hidden;
+  
+  li:before { 
+    color: lighten($gray, 15%);
+  }
+  
+  > li:first-child .comment-meta {
+    border-top: none;
+  }
+
+  .comment-meta {
+    padding-top: 1.25em;
+  }  
+  
+  .comment-author b, .comment-author a {
+    color: $primary-color-dark;
+    font-weight: 300;
+    font-size: 1.125em;
+  }  
+  
+  .says {
+    display: none;
+  }
+  
+  .comment-metadata {
+    font-size: .875em;
+    margin-bottom: .75em;
+    color: lighten($gray, 15%);
+  
+    .edit-link {
+      margin-left: 1em;
+    }
+  }
+  
+  .comment-reply-link,
+  .comment-edit-link {
+    color: $primary-color-dark;
+        
+    &:before {
+      content:'\36';
+      font-family: 'Hochzeitswahn';
+      font-size: .65em;
+      vertical-align: text-top;      
+      margin-right: .5em;
+    }
+    
+    &:hover {
+      color: darken($primary-color-dark, 15%);
+    }
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    .comment-content {
+      @include col(3/4);  
+    }
+    .reply {
+      @include col(1/4);  
+      text-align: right;
+    }
+  }
+}
+
+
+// Pingbacks
+// --------------------------------
+.comment-list .pingback,
+.comment-list .trackback {
+
+  .comment-body {
+    padding-top: 1.25em;
+    margin-bottom: .8em;
+  }
+  
+  a {
+    display: block;
+    color: lighten($gray,18%);
+    
+    &:hover {
+      color: $gray;
+    }
+  }
+  
+  .comment-edit-link {
+    color: $primary-color-dark;
+  }
+}
+
+
+// Comment Form
+// --------------------------------
+.comment-respond {
+  margin-top: 4.25em;
+  
+  .comment-reply-title {
+    font-size: 1.5em;
+    font-family: $body-font-family;
+    font-weight: 300;
+    margin-bottom: 0;
+    
+    a {
+      color: $primary-color;
+      
+      &:hover {
+        color: darken($primary-color, 15%);
+      }
+    }
+  }
+  
+  .comment-notes {
+    font-size: 0.875em;
+    color: lighten($gray, 10%);
+  }
+  
+  .form-submit {
+    margin-bottom: 0.5em;
+  }
+  
+}
+
+.comment-form-subscriptions-wrapper {
+  font-size: 0.875em;
+  
+  a {
+    color: $primary-color-dark;
+    
+    &:hover {
+      color: darken($primary-color-dark, 15%);
+    }
+  }
+  
+  input {
+    margin-right: 0.25em;
+  }
+}
+
+.comment-awaiting-moderation {
+  background-color: $primary-color-dark;
+  color: $white;
+  padding: .25em .5em;
+}
+
+// Comment Subscribe
+// --------------------------------
+.comment-form-subscriptions-wrapper {
+  margin-bottom: 2rem;  
+}

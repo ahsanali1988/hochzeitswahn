@@ -1,0 +1,251 @@
+//**** ---- ****
+//
+// Wahnbuechlein Overview
+//
+//**** ---- ****
+
+
+// Header
+// --------------------------------
+.wahnbuch-header {
+  border: 1px solid #ececec;
+  margin-bottom: 3.25em;
+  overflow: hidden;
+  margin-top: 2.25em;
+  text-align: center;
+ 
+  .wahnbuch-header-info {
+    padding: .5em;
+
+    h1 {
+      font-size: $h5-font-size;
+      margin-bottom: 0.75em;
+      text-transform: none;
+    }
+    
+    h1 strong {
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+  } 
+  
+  .wahnbuch-header-bewerben {
+    background-color: #f7f2ef;
+    padding: 1em 0.5em;
+    
+    h5 {
+      text-transform: uppercase;
+      margin-bottom: .75em;
+    }
+  }
+  
+  @media only screen and (min-width: $medium-min) {    
+    .wahnbuch-header-info {
+      @include span(2/3); 
+      padding-left: 1em;
+      padding-right: 1em;
+      
+      h1 {
+        line-height: 1.4;
+      }
+      
+      p {
+        margin-bottom: 0;
+      }      
+    }
+    
+    .wahnbuch-header-bewerben {
+      @include span(1/3); 
+      padding-left: 1em;
+      padding-right: 1em;
+    }
+  } 
+  
+  @media only screen and (min-width: $large-min) {    
+    height: 17.25rem;
+    
+    .wahnbuch-header-img {
+      max-width: 17.1875rem;
+      float: left;
+    }
+    
+    .wahnbuch-header-info {
+      max-width: 37%;
+    }
+    
+    .wahnbuch-header-bewerben {
+      max-width: 40%;
+      height: 100%;
+      float: right;
+      padding: 2em;
+    }
+  }
+  
+  @media only screen and (min-width: $large-max) {        
+    .wahnbuch-header-info {
+      max-width: 53%;
+      
+      h1 {
+        font-size: $h2-font-size;
+      }
+    }
+    
+    .wahnbuch-header-bewerben {
+      max-width: 25%;
+    }    
+  }
+}
+
+
+// Default Rows
+// --------------------------------
+.post-entry-listing ul {
+  overflow: hidden;
+  margin-bottom: 4rem;
+  
+  li {
+    margin-bottom: 1em;
+    
+    h5 {
+      font-size: 1rem; //$h6-font-size;
+    }
+    
+    .entry-thumbnail {
+      overflow: hidden;
+      padding-top: 70%; //68%;
+      position: relative;
+      
+      > a {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+    
+    .entry-cats {
+      text-align: center;
+      
+      em {
+        font-style: normal;
+        display: block;
+        color: $primary-color-dark;
+      }
+        
+      .dl-entry-cat {
+        border-bottom: 1px solid $primary-color-dark;
+        max-width: 60%;
+        margin: 0 auto;
+        font-size: 0.925rem
+      }
+        
+      .dl-entry-region {
+        font-size: .875em;
+        margin-bottom: 0.75em;
+      } 
+    }
+  }
+  
+  @media only screen and (min-width: $medium-min) {    
+    li {
+      @include col(1/2, $cycle: 2);
+      
+      .entry-thumbnail {
+        background-color: #F0F0F0;
+      }
+      
+      .entry-content {
+        min-height: 6.75rem;
+        
+        .entry-title {
+          min-height: 3.5em;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (min-width: $large-min) {    
+    li {
+      @include col(1/3, $uncycle: 2, $cycle: 3);     
+      
+      .entry-content .entry-title {
+        line-height: 1.4;
+      }
+    }
+  }
+  
+  @media only screen and (min-width: $large-max) {
+    li {
+      @include col(1/4, $uncycle: 3, $cycle: 4);
+      
+      .entry-content .entry-title {
+        min-height: 3.5em;
+      }
+    }
+  }  
+}
+
+
+// Category Overview
+// --------------------------------
+.post-type-archive-hw_wahnbuechlein .wahn-cat {
+  
+  .entry-description {
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.76);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em .5em;
+    text-align: center;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 500ms ease;
+  }
+  
+  &:hover .entry-description  {
+    opacity: 1; 
+  }
+
+  .entry-content {
+    min-height: 0;
+    
+    .entry-title {
+      padding-top: .5em;
+      min-height: 2.5em;
+      font-family: $body-font-family;
+      
+      a {
+        color: $primary-color-dark;
+        
+        &:hover {
+          color: darken($primary-color-dark, 15%);
+        }
+      }
+      
+      &:after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid $primary-color-dark;
+        max-width: 5em;
+        margin: .25em auto;
+      }      
+    }
+  }
+}
+
+
+// Wahnbuch Footer
+// --------------------------------
+.wahnbuch-footer-bewerben {
+  background-color: #f7f2ef;
+  padding: 1.6em 1em;
+  text-align: center;
+  margin-bottom: 4rem;
+  
+  p {
+    max-width: 43rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+} 

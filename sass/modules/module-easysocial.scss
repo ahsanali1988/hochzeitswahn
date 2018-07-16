@@ -1,0 +1,330 @@
+//**** ---- ****
+//
+// Footer
+//
+//**** ---- ****
+
+
+// Social Fans Counter
+// --------------------------------
+.footer-social div.essb-fans,
+.footer-social div.essbfc-counter-container {
+  margin-bottom: 1.5em;
+  overflow: hidden;
+  clear: both;
+  padding: 0;
+  -webkit-font-smoothing: antialiased!important;
+  -moz-osx-font-smoothing: grayscale;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: 0 0;
+  }
+
+  li,
+  .essbfc-block {
+    line-height: 1em;
+    display: inline-block;
+    width: 32%;
+    max-width: 4.6875rem;
+    float: none;
+    
+    .essbfc-front {
+      display: inline-block;
+      background: transparent !important;
+      box-shadow: none;
+    }
+      
+    a {
+      color: $gray !important;
+      text-decoration: none;
+      display: block;
+      overflow: hidden;
+      opacity: .8;
+      -moz-transition: none;
+      -webkit-transition: none;
+      transition: none;
+      padding: 0 0 7px;
+      transition: color 300ms ease;
+      
+      &:hover {
+        color: $primary-color-dark !important;
+      }
+    }
+    
+    i {
+      background: transparent;
+      border-radius: 50px;
+      transition: none;
+      font-size: 1.5rem;
+      margin: 0.5em auto 0;
+      color: inherit!important;
+      height: 50px;
+      line-height: 50px;
+      display: block;
+      text-align: center;
+    }
+    
+    .essbfc-dark-color {
+      color: $gray!important;
+    }
+    
+    span {
+      display: block;
+      min-height: 1em;
+      font-size: 1em;
+      font-weight: 300;
+      text-align: center;
+    }
+    
+    small {
+      display: none;
+    }
+  }  
+}
+
+// Social Icons
+[class*=" essb-fans-icon-"]:before, 
+[class*=" essb-fans-icon2-"]:before, 
+[class^=essb-fans-icon-]:before, 
+[class^=essb-fans-icon2-]:before {
+  font-family: 'Hochzeitswahn';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;  
+}
+
+.essb-fans-icon-facebook:before {
+  content: '\2e';
+}
+
+.essb-fans-icon-twitter:before {
+  content: '\39';
+}
+
+.essb-fans-icon2-pinterest-circled:before, 
+.essb-fans-icon2-pinterest:before {
+  content: '\35';
+}
+
+.essb-fans-icon-google:before {
+  content: '\2f';
+}
+
+.essb-fans-icon-instagram:before {
+  content: '\32';
+}
+
+.essb-fans-icon-rss:before {
+  content: '\37';
+}
+
+
+// Social Sharing Options
+// --------------------------------  
+.sharing-options .essb_links.essb_template_light-retina li a {
+  font-family: $body-font-family; 
+}
+
+.entry-meta .sharing-options .essb_links.essb_template_light-retina .essb_hide_name li a, 
+.entry-meta .sharing-options .essb_links.essb_template_light-retina .essb_force_hide li a {
+  font-size: 0.875em;
+  line-height: 1.5;
+  padding: 0.55em .35em;
+}
+
+.sharing-options .essb_links.essb_template_light-retina a:focus, 
+.sharing-options .essb_links.essb_template_light-retina a:hover {
+  background: none;
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_twitter .essb_icon,
+.sharing-options .essb_links.essb_template_light-retina .essb_link_pinterest .essb_icon,
+.sharing-options .essb_links.essb_template_light-retina .essb_link_facebook .essb_icon,
+.sharing-options .essb_links.essb_template_light-retina .essb_link_google .essb_icon,
+.sharing-options .essb_links.essb_template_light-retina .essb_link_fave .essb_icon {
+  background-image: none;
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  font-size: 1.25em;
+  transition: color 250ms ease;
+  
+  &:after {
+    font-family: 'Hochzeitswahn';
+    color: $white;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em; 
+  }
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_pinterest a {
+  //margin-right: 0;
+  //
+  //.essb_icon {
+  //  font-size: 1.5em;
+  //  margin-top: -5px;  
+  //}
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_facebook .essb_icon:after {
+  content: '\2e';  
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_twitter .essb_icon:after {
+  content: '\39';
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_pinterest .essb_icon:after {
+  content: '\35';
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_google .essb_icon:after {
+  content: '\2f';
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_facebook a:hover .essb_icon:after {
+  color: #355390 !important; 
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_twitter a:hover .essb_icon:after {
+  color: #3daadc !important; 
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_pinterest a:hover .essb_icon:after {
+  color: #c8081d !important; 
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_google a:hover .essb_icon:after {
+  color: #BF3727 !important; 
+}
+
+// Single page
+.entry-details-social.sharing-options  {
+  .essb_links.essb_template_light-retina .essb_link_twitter .essb_icon:after,
+  .essb_links.essb_template_light-retina .essb_link_pinterest .essb_icon:after,
+  .essb_links.essb_template_light-retina .essb_link_facebook .essb_icon:after,
+  .essb_links.essb_template_light-retina .essb_link_google .essb_icon:after,
+  .essb_links.essb_template_light-retina .essb_link_fave .essb_icon:after {
+    color: $gray;
+  }
+  
+  .essb_links.essb_template_light-retina.essb_counter_modern_bottom.essb_counters li a {
+    border-right: 1px solid #dbdbdb;
+    display: inline-block;
+    padding: .25em 1em;
+    
+    .essb_icon {
+      display: block;
+    }
+  }
+
+  .essb_links.essb_template_light-retina.essb_counter_modern_bottom.essb_counters li:last-child a {
+    border-right: none;
+  }  
+}
+
+
+// Fave Icon - needs to hide the span because of Remodal error
+// --------------------------------
+.sharing-options .essb_links.essb_template_light-retina .essb_link_fave .essb_icon {
+  display: none;
+}
+
+.sharing-options .essb_links.essb_template_light-retina .essb_link_fave a {
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  transition: color 250ms ease;
+  
+  &:after {
+    content: '\30';
+    font-family: 'Hochzeitswahn';
+    color: $white;
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.25;
+    -webkit-transition: color 250ms ease;
+    transition: color 250ms ease;
+    font-size: 1.25em;
+    width: 21px;
+    height: 21px;
+    vertical-align: middle;
+  }
+  
+  &:hover:after {
+    color: #d56565 !important;
+  }
+}
+
+.entry-details-social.sharing-options .essb_links.essb_template_light-retina .essb_link_fave a:after {
+  color: $gray;
+}
+
+
+//.sharing-options .essb_links.essb_template_light-retina .essb_link_fave .essb_icon:after {
+//  content: '\30';
+//}
+//.sharing-options .essb_links.essb_template_light-retina .essb_link_fave a:hover .essb_icon:after {
+//  color: #d56565;
+//}
+
+
+// Social Counters
+// --------------------------------
+.essb_links.essb_counters.essb_counter_modern_bottom .essb_item .essb_network_name {
+  max-width: none;     
+
+  .essb_counter_bottom {
+    color: $gray !important;
+    font-weight: 500;
+    font-style: normal;
+    display: block;
+    text-align: center;
+    width: 21px;
+    font-size: 13px;
+  }
+}
+
+
+// Bookmarking
+// --------------------------------
+.sharing-options .bookmarking {
+  float: right;
+  line-height: 1.5;
+  font-size: 1.25em;
+  padding: 0.25em .35em 0.25em 0;
+  
+  a {
+    vertical-align: text-top;
+    position: relative;
+    top: 3px;    
+    
+    &:hover {
+      color: #d56565;
+    }
+  }
+}
+
+
+
+

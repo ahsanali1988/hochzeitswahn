@@ -1,0 +1,54 @@
+//**** ---- ****
+//
+// Module: Content Blocks
+//
+//**** ---- ****
+
+
+// Basics
+// --------------------------------
+.content-block {
+  padding-bottom: 2em;
+}
+
+.include-bg {
+  background-color: #F7F6F6;
+  padding: 2em 1em 1em;
+  margin-bottom: 2em;
+}
+
+
+// Text One col
+// --------------------------------
+.centered-text-block {
+  
+  @media only screen and (min-width: $large-min) {
+    .content-output {
+      max-width: 57rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+
+// Text Two col
+// --------------------------------
+.split-text-block {
+  
+  div:first-child {
+    padding-bottom: 1em;
+  }
+
+  @media only screen and (min-width: $medium-min) {
+    overflow: hidden;
+
+    div:first-child {
+      padding-bottom: 0;
+    }
+
+    > div {
+      @include col(1/2, $gutter: 2.5);
+    }
+  }
+}

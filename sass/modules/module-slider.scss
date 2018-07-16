@@ -1,0 +1,43 @@
+//**** ---- ****
+//
+// Slick Slider
+//
+//**** ---- ****
+
+
+// Slider Single Dienstleister
+// --------------------------------
+button.slick-prev,
+button.slick-next {
+  color: $gray;
+  position: absolute;
+  display: block;
+  line-height: 1.5;
+  font-size: 3em;
+  cursor: pointer;
+  background: transparent;
+  top: 50%;
+  margin-top: -1.5em;
+  padding: 0;
+  border: none;
+  outline: none;
+  
+  &:hover, &:focus {
+    color: $primary-color-dark;
+  }
+  
+  &.slick-disabled {
+    opacity: .25;
+  }
+}
+
+.slick-prev {
+  left: -0.25em;
+}
+
+.slick-next {
+  right: -0.25em;
+}
+
+
+

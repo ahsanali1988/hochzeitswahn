@@ -1,0 +1,411 @@
+//**** ---- ****
+//
+// Wahnbuechlein Single
+//
+//**** ---- ****
+
+
+// Header
+// --------------------------------
+.single-hw_wahnbuechlein { 
+  
+  .entry-header a {
+    color: $primary-color-dark;
+    
+    &:hover {
+      color: darken($primary-color-dark, 15%);
+    }
+  }
+  
+  .back-to-overview { 
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    
+    span {
+      font-size: .5em;
+      margin-right: .5em;
+      position: relative;
+      top: -1px;
+    }
+  }
+  
+  .post-categories {
+    margin: 1.75em 0;
+    text-align: center;
+    position: relative;
+    font-size: 0.875rem;
+
+    a {
+      display: block;
+      max-width: 60%;
+      padding: 0 .75em;
+      margin: 0 auto .25em;
+      background-color: $white;
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase;
+    }
+    
+    a:first-child:before,
+    a:last-child:after {
+      content: '';
+      display: block;
+      position: relative;
+      width: 1.5em;
+      height: 1px;
+      border-bottom: 1px solid #b7a297;
+      margin: 0 auto;
+    }
+    //&:after {
+    //  content: '';
+    //  position: absolute;
+    //  z-index: 0;
+    //  display: block;
+    //  width: 100%;
+    //  height: 1px;
+    //  border-bottom: 1px solid $secondary-color;
+    //  top: 45%  
+    //}
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    .back-to-overview { 
+      display: inline-block;
+      text-align: left;
+      margin-left: 0;
+      float: left;
+    }
+  
+    .post-categories {
+      width: 87.125%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 1.75em;
+      
+      a {
+        display: inline-block;
+        max-width: 33%;
+        
+        &:first-child {
+          border-right: 1px solid $secondary-color;
+        }
+      } 
+    }
+    
+    .post-categories a:first-child:before,
+    .post-categories a:last-child:after {
+      display: none;
+    }
+  }
+  
+  @media only screen and (min-width: $large-min) {
+    .post-categories a:first-child:before,
+    .post-categories a:last-child:after {
+      display: inline-block;
+      margin-right: .5em;
+      top: -3px;      
+    }
+    
+    .post-categories a:last-child:after {
+      margin-right: auto;
+      margin-left: .5em;
+    }
+  }
+}
+
+
+// Details
+// --------------------------------
+.single-hw_wahnbuechlein .entry-details {
+  @media only screen and (min-width: $large-min) {
+    @include col(1/4);
+  }
+  
+  @media only screen and (min-width: $large-max) {
+    @include col(2/5);
+  }  
+  
+  .button {      
+    margin-left: 0.4em;
+    margin-right: 0.4em;    
+  }
+}
+
+.single-hw_wahnbuechlein .entry-details-top {
+  
+  .details-top-img {
+    text-align: center;
+    margin-bottom: 1.75em;
+    max-width: 13.125em;
+    margin-left: auto;
+    margin-right: auto;
+  
+    img {
+      margin-bottom: .5em;
+    }
+  }
+  
+  .button.link-fave {
+    display: block;
+  }
+  
+  .button .icon-hertz {
+    display: block;
+    margin-bottom: .25em;
+  }
+  
+  .details-top-content {
+    margin-bottom: 1.25em;
+    
+    h1 {
+      font-size: 1rem;
+      text-align: center;
+      font-family: $body-font-family;
+      font-weight: 300;
+      line-height: 1.4;
+      margin-bottom: 1.4em;
+    }
+    
+    ul {
+      margin-bottom: .5em;
+    }
+  }
+  
+  .details-top-content-basics {
+    a { 
+      color: $primary-color-dark;
+  
+      &:hover {
+      color: darken($primary-color-dark, 15%);
+      }
+    }
+    
+    li span {
+      font-weight: 500;
+    }
+  }
+  
+  .details-top-content-social li {
+    max-width: 15%;
+    display: inline-block;
+    margin-left: .5em;
+    
+    &:first-child {
+      margin-left: 0;
+    }
+  } 
+
+  @media only screen and (min-width: $medium-min) and (max-width: $medium-max) {
+    .details-top-img,
+    .details-top-content {
+      @include col(1/2);
+    }
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    .details-top-content h1 {
+      text-align: left;
+    }
+  }
+
+  @media only screen and (min-width: $large-min) {
+    .details-top-img {
+      text-align: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  
+  @media only screen and (min-width: $large-max) {
+    .details-top-img,
+    .details-top-content {
+      @include col(1/2);
+    }
+  }    
+}
+
+.single-hw_wahnbuechlein .entry-details-descr {
+  margin-bottom: 1.75em;
+  clear: both;
+}
+
+.single-hw_wahnbuechlein .entry-details-contact {
+  display: block;
+  margin-bottom: 1.75em;
+  max-width: 20rem;
+  font-size: 1.25em;
+}
+
+.single-hw_wahnbuechlein .entry-footer {
+  border-top: none;
+}
+
+
+// Content / Galerie
+// --------------------------------
+.single-hw_wahnbuechlein .entry-content {
+  padding: 0em;
+  text-align: center;
+  background: transparent;
+  border: none;
+  margin-bottom: 2.25rem;
+
+  @media only screen and (min-width: $large-min) {
+    @include col(3/4);
+    margin-right: 0;    
+  }  
+  
+  @media only screen and (min-width: $large-max) {
+    @include col(3/5);
+    margin-right: 0;        
+  }  
+    
+  ul {
+    padding: 0 1.5em;
+  }
+  
+  button.slick-prev, button.slick-next {
+    font-size: 1.5em;
+    margin-top: -0.75em;
+  }
+  
+  .flex-video > div {
+    position: relative;
+  	padding-bottom: 55%;
+  	padding-top: 15px;
+  	height: 0;
+  	overflow: hidden;
+  
+    iframe {
+  	  position: absolute;
+  	  top: 0;
+  	  left: 0;
+  	  width: 100%;
+  	  height: 100%;
+  	 }
+  }
+}
+
+.single-hw_wahnbuechlein .entry-slider-nav {
+  display: none;
+  max-width: 26rem;
+  margin-left: auto;
+  margin-right: auto;
+    
+  @media only screen and (min-width: 33em) {
+    display: block;
+  }
+  
+  li {
+    margin: 0 .1em;
+    cursor: pointer;
+    max-width: 6.5rem;
+    height: 4.5rem;
+    position: relative;
+    overflow: hidden;
+    
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0 .5rem;
+      border: 1px solid #ececec;
+      max-width: none;
+      height: 100%;
+    }
+    
+    &.portrait img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  .video-thumb img {
+    margin-top: -4px;
+  }
+}
+  
+
+// Wahnbuch Post Nav
+// --------------------------------
+.single-hw_wahnbuechlein .post-navigation-wrapper {
+  margin-bottom: 6.25em;
+}
+
+.single-hw_wahnbuechlein .post-navigation-wrapper .posts-to-like  {
+  border-bottom: none;
+  margin-bottom: 0;
+  
+  article {
+    border-bottom: 1px solid #efefef;
+    padding-bottom: .50em;
+    margin-bottom: .5em;
+  }
+
+}
+
+
+// Wahnbuch DL aus der Region
+// --------------------------------
+.single-hw_wahnbuechlein .dienstleister-section {
+  height: auto;
+}
+
+.single-hw_wahnbuechlein .dienstleister-section-selection {
+  width: 100%;
+  float: none;
+  height: auto;
+  position: relative;
+  padding: 0 2.25em;
+  
+  li {
+    height: auto;
+    width: auto;
+    
+    img {
+      height: auto;
+      max-width: 100%;
+      transform: none;
+      left: auto;
+    }
+  }
+  
+  li .dienstleister-entry-content {
+    position: relative;
+    opacity: 1;
+    background-color: #fbfafa;
+    
+    .dl-entry-cat {
+      margin: .5em auto 0.125em;
+    }
+    
+    .dl-entry-region {
+      margin-bottom: 0.75em;
+      color: $primary-color-dark;
+    }
+        
+    h5 {
+      min-height: 3.825em;
+      margin-bottom: 0.25em;
+    }
+  }
+    
+  @media only screen and (min-width: $medium-min) {
+    padding: 0 3.25em;
+  }
+  
+  @media only screen and (min-width: 58.75em) {
+    li .dienstleister-entry-content {
+      .dl-entry-cat {
+        font-size: 0.815rem;;
+      }
+        
+      h5 {
+        font-size: 1.125rem;
+        line-height: 1.4;
+        min-height: 4.825em;
+      }
+    }
+  }  
+}

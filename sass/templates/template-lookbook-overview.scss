@@ -1,0 +1,134 @@
+//**** ---- ****
+//
+// Lookbook: Overview
+//
+//**** ---- ****
+
+
+// Overview
+// --------------------------------
+.lookbook-listing > ul {
+  overflow: hidden;
+  margin-bottom: 4rem;
+  
+  li {
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    border: 2px solid #fff;             
+
+    @media only screen and (min-width: $medium-min) {
+      width: 33.333%;      
+    }
+
+    @media only screen and (min-width: $large-min) {
+      width: 25%;      
+    }
+
+    @media only screen and (min-width: $large-max) {
+      width: 20%;      
+    }    
+
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    
+    img {
+      display: block;
+    }
+  }
+  
+  li.first-img {
+    @media only screen and (min-width: $medium-min) {
+      width: 66.666%;
+      margin-top: -2px;
+    }
+
+    @media only screen and (min-width: $large-min) {
+      width: 50%;
+      margin-top: -2px;   
+    }    
+
+    @media only screen and (min-width: $large-max) {
+      width: 39.925%;
+      margin-top: -1px;   
+    }      
+  }  
+}
+
+.lookbook-listing {
+  
+  .entry-thumbnail {
+    position: relative;
+    border: 1px solid #EDEDED;    
+  }  
+  
+  .entry-content {
+    display: none;
+    position: absolute;
+    z-index: 1;        
+    bottom: 1rem;
+    width: 80%;
+    margin: 0 10%;
+    background-color: rgba(251, 250, 250, 0.75);
+    
+    > a {
+      color: $primary-color-dark;
+      text-transform: uppercase;
+      
+      &:hover {
+        color: darken($primary-color-dark, 15%);
+      }
+      
+      &:after {
+        content: '';
+        display: block;
+        max-width: 5em;
+        height: 0px;
+        border-bottom: 1px solid $primary-color-dark;
+        margin: 0.25em auto 0.125em;
+      }
+    }
+    
+    &:after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      border: 1px solid #fff;
+      padding: .5em;
+      box-sizing: content-box;
+      position: absolute;
+      z-index: -1;          
+      left: -0.5em;
+      top: -0.5em;
+    }
+    
+    .entry-title {
+      font-size: 1rem;
+      font-family: $body-font-family;
+      font-weight: 300;
+      text-transform: none;
+      
+      a:hover {
+        color: #000;
+      }
+    }  
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    .entry-content {
+      display: block;
+    }
+  }
+  
+  @media only screen and (min-width: 72em) {
+    .entry-title {
+      min-height: 2rem;
+    }
+  } 
+}

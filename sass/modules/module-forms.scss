@@ -1,0 +1,255 @@
+//**** ---- ****
+//
+// Module: Forms
+//
+//**** ---- ****
+
+
+// Basics
+// --------------------------------
+form {
+  
+  ul {
+    @extend .unstyled;
+    padding-left: 0 !important;
+  }
+    
+  input[type="text"], input[type="email"], input[type="password"], input[type="url"], input[type="number"], textarea {
+    width: 100%;
+    border: 1px solid #f8ebe6;
+    background-color: #f8ebe6;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: .75em .5em;
+    outline: 0;
+    border-radius: 0;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    transition: border-color 250ms ease;
+    
+    &:focus {
+      border-color: darken(#f8ebe6, 15%);
+    }
+  }
+  
+  input.medium {
+    @media only screen and (min-width: 33em) {
+      width: 49.25%;
+    }
+  }
+  
+  input.small {
+     @media only screen and (min-width: $medium-min) {
+      width: 33.333%;
+    }
+  }
+  
+  textarea {
+    display: block;
+    resize: vertical;
+  }
+  
+  select {
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: #FDF9F9;
+    background-image: url("img/select-arrows.svg");
+    background-position: 98% center;
+    background-repeat: no-repeat;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #f8ebe6;
+    line-height: normal;
+    padding: 0.75em 0.5em;
+    border-radius: 0;
+    height: 2.65rem;
+    width: 100%;
+    margin-bottom: .5em;
+    
+    &:focus {
+      border-color: darken(#f8ebe6, 15%);
+    }
+  }
+    
+  input[type="submit"],  
+  button, 
+  .button {
+    background-color: $primary-color;
+    color: $white;
+    transition: background-color 300ms ease;
+    width: 11em;
+    padding: .75em 0;
+    border: none;
+    
+    &:hover {
+      background-color: $primary-color-dark;
+    }
+  }
+  
+  input, textarea, select {
+    &:focus {outline: none;}
+  }
+}
+
+
+// Form layout helper
+// --------------------------------
+.left_half {
+  @media only screen and (min-width: 33em) {
+    width: 50%;
+    float: left;
+    padding-right: .5em;
+  }
+}
+
+.right_half {
+  @media only screen and (min-width: 33em) {
+    width: 50%;
+    float: right;
+    padding-left: .5em;
+  }
+}
+
+.clear_halfs, .gf_clear {
+  clear: both;
+}
+
+
+// GForm specific fields
+// --------------------------------
+.gform_wrapper > br {
+  display: none;
+}
+
+form .gfield {
+  margin-bottom: 2.4em;
+}
+
+.gform_footer {
+  clear: both;
+}
+
+.gform_footer p:last-child {
+  max-height: 1px;
+}
+
+.ginput_complex {
+  overflow: hidden;
+  
+  br, p {
+    display: none;
+  }
+  
+  @media only screen and (min-width: 33em) {
+    > span {
+      width: 50%;
+      float: left;
+      
+      label {
+        font-size: 0.875em;
+        color: lighten($gray, 15%);
+      }
+    }
+    
+    .ginput_left {
+      padding-right: .5em;
+    }
+    
+    .ginput_right {
+      padding-left: .5em;
+    }
+  }  
+}
+
+.gform_fileupload_multifile {
+  position: relative;
+}
+
+.gform_fileupload_multifile .gform_drop_area {
+  padding: 25px;
+  border: 2px dashed #ddd;
+  text-align: center;
+  color: #AAA;
+  margin-bottom: 10px;
+}
+
+.gfield_required {
+  color: $alert-color;  
+}
+
+.gform_validation_container, .ginput_counter {
+  display: none;
+}
+
+form .field_description_above {
+  label {
+    display: block;
+  }
+  
+  .gfield_description {
+    font-size: 0.875em;
+    color:#565656;
+    background: #f5f5f5;
+    width: auto;
+    display: inline-block;
+    padding: .25em .5em;
+    margin: 0.5em 0;
+    border-radius: 4px;
+  }
+}
+
+.gsection {
+  display: block;
+  min-height: 1px;
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.gform_ajax_spinner {
+  margin-left: 1rem;
+}
+
+
+// Errors and validation
+// --------------------------------
+.validation_error {
+  background-color: $alert-color;
+  color: $white;
+  margin-bottom: 1.6rem;
+  padding: .5em;
+}
+
+.gfield_error { 
+  border: 2px solid rgb(192, 105, 105);
+  padding: 1em 1em 2.25em;
+  
+  input, textarea {
+    border-color: $alert-color; 
+  }
+  .validation_message {
+    padding-top: .5em;
+    color: $alert-color;
+    font-size: .75rem;
+    position: absolute;
+  }
+}
+
+#gform_wrapper_4 .gfield_error .validation_message {
+  position: relative; 
+}
+
+.gform_confirmation_message {
+  text-align: center;
+}
+
+
+// Notice for subscribers and Wahnbuch
+// --------------------------------
+.loggedin-notice {
+  display: none;
+}
+
+.subscriber .loggedin-notice {
+  display: block;
+}

@@ -1,0 +1,224 @@
+//**** ---- ****
+//
+// Posts Navigations
+//
+//**** ---- ****
+
+
+// Postnavigation
+// --------------------------------
+.post-navigation {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin: 1.25em 0; 
+}
+
+
+// Single Post Nav with Thumb
+// --------------------------------
+.post-navigation {
+  overflow: hidden;
+  border: 1px solid #ebebeb;
+  
+  span {
+    display: block;
+    padding: .25em;
+  }
+  
+  a {
+    font-size: .875rem;
+    line-height: 1.4;
+    color: $primary-color-dark;
+    display: block;
+    overflow: hidden;
+    background-color: #FCFCFC;
+    text-align: center;
+    
+    &:hover {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+  
+  img {
+    margin-right: 1em;
+  }
+  
+  .nav-previous {
+    float: left;
+    width: 50%;
+    border-right: 1px solid #ebebeb;
+  }
+  
+  .nav-next {
+    float: right;
+    width: 50%;
+    
+    img {
+      margin-right: 0;
+    }
+  }
+  
+  .prev-title, .next-title {
+    color: $gray;
+    display: none;
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    span {
+      padding-top: 2em;
+    }
+    
+    a {
+      height: 8.9375rem;
+    }
+    
+    img {
+      float: left;
+      padding-top: 0;
+    }
+    
+    .nav-next img {
+      float: right;
+      margin-left: 1em;      
+    }    
+  }
+  
+  @media only screen and (min-width: $large-min) {
+    span {
+      padding-top: 1.25em;
+    }
+    
+    .prev-title, .next-title {
+      display: block;
+      padding-top: .25em;
+    }
+    
+    .nav-previous a:before, .nav-next a:before {
+      content: '\22';
+      font-family: 'Hochzeitswahn';
+      display: block;
+      background-color: $primary-color;
+      color: $white;
+      width: 1.25em;
+      height: 100%;
+      float: left;
+      line-height: 5.25;
+      font-size: 2em;
+    }
+    
+    .nav-next a:before {
+      content: '\23';
+      float: right;
+    }    
+  }  
+
+  @media only screen and (min-width: $large-max) {
+    span {
+      padding-top: 1.75em;
+    }    
+    
+    a {
+      font-size: 1rem;
+    }
+    .nav-previous a:before, .nav-next a:before {
+      line-height: 4.5;
+    }
+  }
+}
+
+
+// Paging Nav
+// --------------------------------
+.page-navigation {
+  a {
+    height: auto;
+    line-height: 6.5;
+    
+    &:hover {
+      color: $white;
+      background-color: $primary-color;
+    }
+  }
+  
+  .nav-previous a:before, .nav-next a:before {
+    line-height: 3.25;
+  }  
+}
+
+.js .paging-nav {
+  display: none;
+}
+
+
+// Lazy Load Button
+// -------------------------------- 
+.load-more-button {
+  display: none;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin: 1.25em 0; 
+  transition: all 200ms ease-out;
+  
+   span {
+    font-size: 2.125em;
+    display: block;
+    margin-top: -0.125em;
+    color: $secondary-color;
+    transition: transform 200ms ease-out;
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    font-size: 1.5em;
+    margin: 3.25em 0;
+  } 
+  
+  &:hover {
+    color: $primary-color-dark;
+  }
+  &.loading { 
+    opacity: .35;
+  }
+  
+  &.loading span {
+    animation-name: imLoading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.03, 0.15, 0.22, 0.99);
+  }
+  
+  &.all-done {
+    display: none !important;
+  }
+}
+
+@keyframes imLoading {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+.js .load-more-button {
+  display: block;
+}
+
+
+// Pagination (e.g. on Gallery page)
+// -------------------------------- 
+.pagination-links {
+  text-align: center;
+  margin: 3.25em 0;
+  font-weight: 500;
+  font-size: 1.125em;
+    
+  .page-numbers {
+    display: inline-block;
+    padding: .5em;      
+  }
+  
+  a:hover, .page-numbers.current {
+    color: $primary-color-dark;
+  }
+  
+}

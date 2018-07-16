@@ -1,0 +1,190 @@
+//**** ---- ****
+//
+// Module: Modals
+//
+//**** ---- ****
+
+
+// Basics
+// --------------------------------
+
+/*
+ *  Remodal - v0.6.4
+ *  Flat, responsive, lightweight, easy customizable modal window plugin with declarative state notation and hash tracking.
+ *  http://vodkabears.github.io/remodal/
+ *
+ *  Made by Ilya Makarov
+ *  Under MIT License
+ */
+
+html.remodal-is-locked {
+  overflow: hidden;
+}
+
+.remodal, [data-remodal-id] {
+  visibility: hidden;
+}
+
+// Overlay
+.remodal-overlay {
+  position: fixed;
+  z-index: 9999;
+  top: -5000px;
+  right: -5000px;
+  bottom: -5000px;
+  left: -5000px;
+  display: none;
+}
+
+// Wrapper
+.remodal-wrapper {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  overflow: auto;
+  text-align: center;
+  -webkit-overflow-scrolling: touch;
+  
+  &:after {
+    display: inline-block;
+    height: 100%;
+    margin-left: -0.05em;
+    content: '';
+  }
+}
+
+// Fix iPad, iPhone glitches 
+.remodal-overlay,
+.remodal-wrapper {
+    -webkit-transform: translateZ(0px);
+}
+
+// Necessary styles of the modal dialog 
+.remodal {
+  position: relative;
+  display: inline-block;
+}
+
+// Anti-zoom. Font-size should be >= 16px
+.remodal select,
+.remodal textarea,
+.remodal input,
+.remodal select:focus,
+.remodal textarea:focus,
+.remodal input:focus {
+  font-size: 1rem;
+}
+
+
+// Modal Theme
+// --------------------------------
+.modal-overlay, 
+.remodal-overlay {
+  background-color: rgba(0,0,0,.75);
+}
+
+.modal-wrapper > div,
+.remodal-wrapper > div {
+  position: fixed;
+  width: 280px;
+  margin-left: -140px;
+  left: 50%;
+  top: 45%;
+  transform: translateY(-50%);
+  z-index: 190001;
+  
+  background-color: $white;
+  color: $gray;
+  padding: 1em;
+  
+  @media only screen and (min-width: $medium-min) {
+    width: 480px;
+    margin-left: -240px;
+  }
+}
+
+.remodal-is-active div.remodal > p {
+  display: block !important;
+}
+
+.remodal-close {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -24px;
+  font-size: 14px;
+  padding: 0;
+  color: $white;
+  
+  &:after {
+		content: "\2c";
+    font-family: 'Hochzeitswahn';
+	  speak: none;
+	  font-style: normal;
+	  font-weight: normal;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+
+// UserPro
+// --------------------------------
+div.userpro-overlay {
+  background: none;
+  background-image: none;
+  background-color: rgba(0,0,0,.75);
+}
+
+div.userpro-overlay-inner div.userpro {
+  border-radius: 0;
+  color: $gray;
+  border: none;
+  padding: 1em;
+}
+
+div.userpro-overlay-inner div.userpro a.userpro-close-popup {
+  display: block !important;
+  position: absolute;
+  right: 0;
+  top: -30px;
+  font-size: 11px !important;
+  text-transform: uppercase;
+  padding: 0 28px 0 0;
+  height: 16px;
+  line-height: 16px;
+  opacity: 0.7;
+  
+  color: #fff;
+  background: url(img/close.png) no-repeat right center;
+}
+
+
+// UserPro Bookmark
+// --------------------------------
+.fav-modal-window div.userpro-bm {
+  min-width: 100%;  
+  max-width: 100%;
+}
+
+
+// Google Maps pPopup
+// --------------------------------
+.acf-map {
+	width: 25rem;
+	height: 25rem;
+	max-width: 90%;
+	max-height: 75vh;
+	margin: 1rem auto;
+
+  img {
+    max-width: inherit !important;
+  }
+}

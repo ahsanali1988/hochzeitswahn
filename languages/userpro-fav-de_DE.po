@@ -1,0 +1,299 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-22 12:10+0200\n"
+"PO-Revision-Date: 2015-05-13 10:57+0100\n"
+"Last-Translator: Admin\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __ngettext:1,2;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 1.7.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/admin.php:27
+msgid "Extension Settings"
+msgstr "Plugin Einstellungen"
+
+#: admin/admin.php:54
+msgid "User Bookmarks"
+msgstr "Benutzer Favoriten"
+
+#: admin/admin.php:104
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+#: admin/admin.php:110
+msgid "Settings are reset to default."
+msgstr "Einstellungen zurück gesetzt."
+
+#: admin/panels/settings.php:3
+msgid "General Settings"
+msgstr "Generelle Einstellungen"
+
+#: admin/panels/settings.php:7
+msgid "Automatically add bookmark widget after post content"
+msgstr "Bookmark Widget automatisch nach jedem Beitrag einfügen"
+
+#: admin/panels/settings.php:10 admin/panels/settings.php:62
+#: admin/panels/settings.php:82 admin/panels/settings.php:92
+#: admin/panels/settings.php:102
+msgid "Yes"
+msgstr "Ja"
+
+#: admin/panels/settings.php:11 admin/panels/settings.php:63
+#: admin/panels/settings.php:83 admin/panels/settings.php:93
+#: admin/panels/settings.php:103
+msgid "No"
+msgstr "Nein"
+
+#: admin/panels/settings.php:17
+msgid "Exclude these post types"
+msgstr "Beitragsarten ausklammern"
+
+#: admin/panels/settings.php:19
+msgid "Choose post types"
+msgstr "Wähle den Beitragstyp"
+
+#: admin/panels/settings.php:27
+msgid ""
+"Applies to automatic bookmark widget insertion only. e.g. If you do not want "
+"the widget to appear on certain post types."
+msgstr ""
+"Applies to automatic bookmark widget insertion only. e.g. If you do not want "
+"the widget to appear on certain post types."
+
+#: admin/panels/settings.php:32
+msgid "Exclude these IDs"
+msgstr "Diese IDs ausgrenzen"
+
+#: admin/panels/settings.php:35
+msgid ""
+"For automatic widget insertion, this can exclude the post IDs you specify "
+"here (seperated by comma) regardless of any other settings."
+msgstr ""
+"For automatic widget insertion, this can exclude the post IDs you specify "
+"here (seperated by comma) regardless of any other settings."
+
+#: admin/panels/settings.php:42 admin/panels/settings.php:183
+msgid "Save Changes"
+msgstr "Speichern"
+
+#: admin/panels/settings.php:43 admin/panels/settings.php:184
+msgid "Reset Options"
+msgstr "Zurücksetzen"
+
+#: admin/panels/settings.php:46
+msgid "Bookmark Shortcode Settings"
+msgstr "Bookmark Shortcode Einstellungen"
+
+#: admin/panels/settings.php:47
+msgid ""
+"These settings can be overridden by shortcode options. They are for general "
+"bookmark template that appears on your content. The bookmark sidebar widget "
+"may override some settings to make it look perfect in sidebar."
+msgstr ""
+"These settings can be overridden by shortcode options. They are for general "
+"bookmark template that appears on your content. The bookmark sidebar widget "
+"may override some settings to make it look perfect in sidebar."
+
+#: admin/panels/settings.php:51
+msgid "Bookmark Widget Width"
+msgstr "Bookmark Widget Breite"
+
+#: admin/panels/settings.php:54
+msgid "e.g. 250px, 50%, 300px, etc."
+msgstr "z.B. 250px, 50%, 300px, etc."
+
+#: admin/panels/settings.php:59
+msgid "Widgetized Look"
+msgstr "Widgetized Look"
+
+#: admin/panels/settings.php:69
+msgid "Default Alignment"
+msgstr "Standard Ausrichtung"
+
+#: admin/panels/settings.php:72
+msgid "Left"
+msgstr "Links"
+
+#: admin/panels/settings.php:73
+msgid "Right"
+msgstr "Rechts"
+
+#: admin/panels/settings.php:79
+msgid "Inline Display"
+msgstr "Inline Display"
+
+#: admin/panels/settings.php:89
+msgid "Disable top margin"
+msgstr "Disable top margin"
+
+#: admin/panels/settings.php:99
+msgid "Disable bottom margin"
+msgstr "Disable bottom margin"
+
+#: admin/panels/settings.php:109
+msgid "Gap between buttons (%)"
+msgstr "Gap between buttons (%)"
+
+#: admin/panels/settings.php:112
+msgid "This is used if your bookmark widget width is fluid using percentages."
+msgstr "This is used if your bookmark widget width is fluid using percentages."
+
+#: admin/panels/settings.php:117
+msgid "Gap between buttons (px)"
+msgstr "Gap between buttons (px)"
+
+#: admin/panels/settings.php:120
+msgid "This is used if your bookmark widget width is fixed using pixels."
+msgstr "This is used if your bookmark widget width is fixed using pixels."
+
+#: admin/panels/settings.php:125
+msgid "Text for \"Remove Bookmark\""
+msgstr "Text für \"Remove Bookmark\""
+
+#: admin/panels/settings.php:132
+msgid "Text for \"Bookmark has been added\""
+msgstr "Text für \"Bookmark has been added\""
+
+#: admin/panels/settings.php:139
+msgid "Text for \"Bookmark has been removed\""
+msgstr "Text für \"Bookmark has been removed\""
+
+#: admin/panels/settings.php:146
+msgid "Text for \"Default Collection\""
+msgstr "Text für \"Default Collection\""
+
+#: admin/panels/settings.php:153
+msgid "Text for \"Add to Collection\""
+msgstr "Text für \"Add to Collection\""
+
+#: admin/panels/settings.php:160
+msgid "Text for \"New Collection\""
+msgstr "Text für \"New Collection\""
+
+#: admin/panels/settings.php:167
+msgid "Text for \"New Collection Placeholder\""
+msgstr "Text für \"New Collection Placeholder\""
+
+#: admin/panels/settings.php:174
+msgid "Text for \"Submit New Collection\""
+msgstr "Text für \"Submit New Collection\""
+
+#: functions/api.php:90
+#, php-format
+msgid "%s Bookmarks in Collection"
+msgstr "%s Favoriten in dieser Kollektion"
+
+#: functions/api.php:93
+msgid "Undo"
+msgstr "Rückgängig"
+
+#: functions/api.php:93
+msgid "Remove Collection"
+msgstr "Kollektion löschen"
+
+#: functions/api.php:97
+msgid ""
+"Choose how do you want to remove this collection. This action cannot be "
+"undone!"
+msgstr ""
+"Wähle, wie du diese Kollektion löschen möchtest. Löschen kann nicht "
+"rückgängig gemacht werden!"
+
+#: functions/api.php:100
+msgid "Remove collection and all bookmarks in it"
+msgstr "Entferne die Kollektion und alle Favoriten darin"
+
+#: functions/api.php:101
+msgid "Remove collection only"
+msgstr "Entferne nur die Kollektion"
+
+#: functions/api.php:103
+msgid "Remove collection"
+msgstr "Entferne die Kollektion"
+
+#: functions/api.php:122 functions/api.php:136
+msgid "Remove"
+msgstr "Löschen"
+
+#: functions/api.php:141
+msgid "Content Removed"
+msgstr "Inhalt gelöscht"
+
+#: functions/api.php:155
+msgid "You did not add any content to this collection yet."
+msgstr "Diese Kollektion ist noch leer."
+
+#: functions/api.php:285
+#, php-format
+msgid ""
+"You need to <a href=\"%s\">login</a> or <a href=\"%s\">register</a> to view "
+"and manage your bookmarks."
+msgstr ""
+"Du musst <a href=\"%s\">angemeldet</a> sein oder dich <a href=\"%s"
+"\">registrieren</a> um die Favoriten zu sehen."
+
+#: functions/api.php:370
+#, php-format
+msgid ""
+"You need to <a href=\"%s\">login</a> or <a href=\"%s\">register</a> to "
+"bookmark/favorite this content."
+msgstr ""
+"Du musst <a href=\"%s\">angemeldet</a> sein oder dich <a href=\"%s"
+"\">registrieren</a> um den Inhalt zu favorisieren."
+
+#: functions/defaults.php:39
+msgid "Remove Bookmark"
+msgstr "Favorit entfernen"
+
+#: functions/defaults.php:40
+msgid "Thanks for bookmarking this content!"
+msgstr "Schön, dass dir dieser Inhalt gefällt!"
+
+#: functions/defaults.php:41
+msgid "This content is no longer in your bookmarks."
+msgstr "Dieser Inhalt ist nicht mehr in deinen Kollektionen vorhanden."
+
+#: functions/defaults.php:42
+msgid "Default Collection"
+msgstr "Allgemeine Kollektion"
+
+#: functions/defaults.php:43
+msgid "Add to Collection"
+msgstr "Zur Kollektion hinzufügen"
+
+#: functions/defaults.php:44
+msgid "New Collection"
+msgstr "Neue Kollektion"
+
+#: functions/defaults.php:45
+msgid "Enter collection name..."
+msgstr "Name der Kollektion..."
+
+#: functions/defaults.php:46
+msgid "Add New Collection"
+msgstr "Neue Kollektion hinzufügen"
+
+#: functions/widgets.php:13
+msgid "Show the bookmark widget in your sidebar"
+msgstr "Zeige das Bookmark Widget in deiner Seitenleiste an."
+
+#: functions/widgets.php:17
+msgid "UserPro - Bookmark Widget"
+msgstr "UserPro - Bookmark Widget"
+
+#: functions/widgets.php:63
+msgid "Bookmark Me"
+msgstr "Favorisiere mich"
+
+#: functions/widgets.php:67
+msgid "Title:"
+msgstr "Titel:"

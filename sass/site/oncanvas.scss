@@ -1,0 +1,331 @@
+//**** ---- ****
+//
+// Navigation Large
+//
+//**** ---- ****
+
+
+@media only screen and (min-width: $large-min) {
+
+  // On Canvas Defaults
+  // --------------------------------
+  .main-navigation {
+    position: relative;
+    padding: .575em 0em;
+    margin-top: 3em;
+    
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+      width: 0;
+      height: 0;
+    }
+  }
+
+  .off-canvas-wrapper {
+    border-right: none;
+    border: none;
+  }
+  
+  
+  // Remove 3D Transform
+  // --------------------------------
+  .js .off-canvas-wrapper {
+    position: relative;
+    z-index: 100;
+    //width: 70%;
+    //float: left;
+    
+    width: 100%;
+    float: none;
+    max-width: none;
+    height: auto;
+    top: auto;
+    left: auto;
+    padding: 0;
+    background-color: transparent;
+    overflow: visible;    
+    transform: translate3d(0%,0,0);
+  }
+
+  .js.no-csstransforms3d .off-canvas-wrapper {
+    transform: translateX(0%);
+  }
+  
+  
+  // On Canvas Navigation List
+  // --------------------------------
+  .off-canvas-menu {
+    
+    > ul {
+      margin-bottom: 0;
+    }
+              
+    a {
+      color: $black;
+    }
+        
+    a:hover, li.submenu-active > a, li.current-menu-ancestor > a, li.current-menu-item > a {
+      color: $primary-color-dark;
+    }
+    
+    // Level 1
+    > ul > li {  
+      display: inline-block;
+      padding-bottom: 0em;
+      
+      > a {
+        font-size: 1em;
+        margin-right: .75em; 
+
+        @media only screen and (min-width: 71em) and (max-width: 84.975em) {
+          margin-right: 1.75em;
+        }
+        
+        @media only screen and (min-width: $large-max) {
+          font-size: 1.125em;
+          margin-right: .75em;
+          background-image: url('img/elements/dotted-pattern.svg');
+          background-repeat: repeat-y;
+          background-position: 100% center;
+          padding-right: 1.75em;
+          padding-top: .25em;
+          padding-bottom: .25em; 
+        }
+      }
+                    
+      &:last-child a {
+        margin-right: 0;
+        background-image: none;
+      }            
+            
+      &.menu-item-has-children > span {
+        display: none;
+      }
+      
+      &:after {
+        content: '';
+        display: none;
+        background-image: none;
+      }      
+    } // End of Level 1
+    
+    // Level 2
+    > ul > li.submenu-active > .sub-menu { 
+      display: block;
+    }
+    
+    .sub-menu {
+      display: none;
+      list-style: none;
+      padding: 1em;
+      position: fixed;
+      left: 0;
+      top: 2.25em;
+      min-width: 60em;
+      min-height: 26em;
+      background: #fff;
+      border: 1px solid #ededed;
+      box-shadow: 0 4px 9px rgba(0,0,0,.15);
+      
+      > li {
+        margin-bottom: .25em;
+        width: 25%;
+      } 
+      
+      > li > a {
+        text-transform: uppercase;
+        display: block;
+        width: 90%;
+        font-size: 1.125em;
+        margin-bottom: .25em;
+        padding-bottom: .25em;
+        border-bottom: 1px solid #ededed;
+      }
+      
+      > li.recent-posts {
+        display: block;
+        width: 75%;
+        position: absolute;
+        top: 1em;
+        left: 25%;
+        padding-left: 1em;
+        border-left: 1px solid $secondary-color;        
+      }
+      
+      > li.view-all a, > li.view-all-default a {
+        border-bottom: none;
+        margin-top: 2em;
+        text-align: center;
+        text-transform: none;
+        color: $primary-color;
+        
+        &:hover {
+          color: darken($primary-color, 10%);
+        }
+        
+        &:after {
+          content: "\23";
+          font-family: 'Hochzeitswahn';
+          speak: none;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          vertical-align: bottom;
+          line-height: 1.5;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-size: .75em;
+          position: relative;
+          top: -3px;
+          margin-left: .25em;          
+        }
+      }
+    } // End of Level 2
+    
+    // Level 3
+    .sub-menu > .sub-menu {
+      list-style: none;
+      padding-left: 1em;
+      
+      > li {
+        margin-bottom: .25em;
+      } 
+      
+      > li > a {
+        
+      }
+    } // End of Level 3
+  }
+  
+  
+  // Recent posts in Menu
+  // --------------------------------    
+  .featured-post-menu-wrapper {
+    width: 100%;
+    overflow: hidden;
+    
+    .featured-post-menu-content {
+      @include col(1/3, $gutter: 2);
+      max-width: 18.5em;
+      padding-right: 1em;
+      
+      a {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid transparent;
+        transition: border-color 300ms ease;
+        
+        &:hover {
+          border-color: $primary-color;
+        }
+      }
+              
+      img {
+        display: block;
+      }
+    }
+    
+    .features-post-menu-title {
+      font-family: $header-font-family;
+      font-size: 1.125em;
+      text-transform: uppercase;
+      color: $black;
+      height: 7.5em;
+      background: #f5f5f5;
+      position: relative;
+      text-align: center;
+
+      span {
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 0em 1em;
+      }
+    }
+  }
+  
+  
+  // On Canvas Main Meta incl. Search and Social
+  // --------------------------------  
+  .main-navigation-meta {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    margin-left: 0;
+    z-index: 100;
+      
+    > div {
+      float: left;
+      height: 100%;
+    }
+    
+    @media only screen and (min-width: $large-min) {
+      .search-term {
+        display: none;
+      }
+    }
+  }
+  
+  
+  // On Canvas Search
+  // --------------------------------    
+  .main-navigation-search {
+  
+    .searchform-toggle {
+      padding: .35rem 0;
+      display: block;
+      line-height: 1.9;
+      color: $primary-color-dark;
+      font-size: 1.25em;
+      
+      span {
+        transition: color 250ms ease;
+      }
+      
+      &:hover span {
+        color: darken($primary-color-dark, 15%);
+      }
+    }   
+  }
+  
+  
+  // On Canvas Social List
+  // --------------------------------  
+  .main-navigation-social {
+    margin-left: .5em;
+    padding-left: .5em;
+    border-left: 1px solid $secondary-color;
+
+    ul {
+      margin-bottom: 0;
+      height: 100%;
+      padding: .575em 0;
+    
+      li {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: .25em;
+        
+        span {
+          transition: color 250ms ease;
+        }
+        
+        a:hover span {
+          color: $primary-color-dark;
+        }
+      }
+
+      @media only screen and (min-width: $large-max) {
+        font-size: 1.125em;
+      }
+    }
+  }
+}

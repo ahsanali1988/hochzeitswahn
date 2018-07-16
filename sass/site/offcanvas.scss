@@ -1,0 +1,316 @@
+//**** ---- ****
+//
+// Navigation Small
+//
+//**** ---- ****
+
+
+// Off Canvas Defaults
+// --------------------------------
+.off-canvas-wrapper {
+  border-right: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
+}
+
+.off-canvas-close {
+  float: right;
+  margin-bottom: .65em;
+  color: $primary-color;
+  
+  &:hover {
+    color: $primary-color-dark;
+  }
+}
+
+.main-navigation {
+  border-top: 1px solid $secondary-color;
+  border-bottom: 1px solid $secondary-color;
+  margin-top: .85em;
+  padding-top: .25em;
+}
+
+
+// JS and 3D Transform
+// --------------------------------
+.js .off-canvas-wrapper {
+  position: fixed;
+  z-index: 100;
+  width: 85%;
+  max-width: 26em;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  padding: 1em 1em 5em;
+  background-color: $white;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  
+  transform: translate3d(-105%,0,0);
+  transition: transform 300ms ease-out;
+  
+  @media only screen and (min-width: 23em) {
+    width: 78%;
+  }
+}
+
+.js.off-canvas-active .off-canvas-wrapper {
+  transform: translate3d(-0%,0,0);
+}
+
+
+// JS and NO 3D Transform
+// --------------------------------
+.js.no-csstransforms3d .off-canvas-wrapper {
+  transform: translateX(-100%);
+}
+.js.no-csstransforms3d.off-canvas-active .off-canvas-wrapper {
+  transform: translateX(-0%);
+}
+
+
+// Off Canvas Top Nav
+// --------------------------------
+.off-canvas-wrapper .top-navigation ul {
+  clear: right;
+  text-align: left;
+  border-bottom: 1px solid $secondary-color;
+  margin-bottom: 1em;
+  
+  li {
+    margin-left: 0em;
+    margin-right: .125em;
+  }
+  
+  li a { 
+    font-size: .6em;
+  }
+  
+  li.home-icon a {
+    font-size: 0;
+    
+    &:before {
+      content: "\31";
+      font-size: .95rem;
+    }
+  }
+
+  @media only screen and (min-width: 23em) {
+    li {
+      margin-right: .25em;
+    }
+   
+    li a { 
+      font-size: .725em;
+    }
+  }
+
+  @media only screen and (min-width: $medium-min) {
+    li {
+      margin-right: .5em;
+    }
+   
+    li a { 
+      font-size: .875em;
+    }
+  }
+}
+
+
+// Off Canvas Navigation List
+// --------------------------------
+.off-canvas-menu {
+  
+  // Level 1
+  > ul > li {  
+    padding-bottom: .5em;
+    
+    > a {
+      font-size: 1.125em;
+      text-transform: uppercase;
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin-top: .5em;
+      background-image: url('img/elements/dotted-pattern.svg');
+      background-position: left top;
+      background-repeat: repeat-x;
+    }
+        
+    &.menu-item-has-children > span {
+      color: $primary-color;
+      line-height: 1.5;
+      position: absolute;
+      right: 1em;
+      cursor: pointer;
+    }
+  } // End of Level 1
+  
+  // Level 2
+  > ul > li.submenu-active > .sub-menu { 
+    display: block;
+  }
+      
+  .sub-menu {
+    display: none;
+    list-style: none;
+    padding-left: 1em;
+    
+    > li {
+      margin-bottom: .25em;
+    } 
+    
+    > li > a {
+      
+    }
+    
+    > li.recent-posts {
+      display: none;
+    }
+  } // End of Level 2
+  
+  // Level 3
+  .sub-menu > .sub-menu {
+    list-style: none;
+    padding-left: 1em;
+    
+    > li {
+      margin-bottom: .25em;
+    } 
+    
+    > li > a {
+      
+    }
+  } // End of Level 3
+}
+
+
+// Off Canvas Meta List
+// --------------------------------
+.off-canvas-meta {
+  a {
+    font-size: .875em;
+  }
+}
+
+
+// Off Canvas Social
+// --------------------------------
+.off-canvas-social ul {
+  li:not(:first-child) {
+    display: inline-block;
+    width: 12%;
+    font-size: 1.35em;
+    margin-left: .25em;    
+  }
+}
+
+// Off Canvas Newsletter
+// --------------------------------
+.off-canvas-newsletter {
+  h6 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875em;
+    margin-bottom: .25em;
+  }
+  
+  input.email {
+    width: 80%;
+    display: inline-block;
+    min-height: 2.85em;    
+  }
+  
+  input.button {
+    width: 20%;
+    display: inline-block;
+    float: right;
+    background-color: $primary-color;
+    color: $white;
+    font-family: 'Hochzeitswahn';
+    margin-bottom: 0;
+    line-height: 1;    
+  }
+}
+
+
+// Off Canvas Search
+// --------------------------------
+.main-navigation-meta {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  margin-left: -3.75rem;
+  
+  .main-navigation-search {
+    line-height: 2.5;
+  }
+  
+  .icon-lupe {
+    position: relative;
+    top: 1px;
+    color: $primary-color-dark;
+  }
+  
+  .search-term {
+    text-transform: uppercase;
+  }
+}
+
+header {  
+  .searchform-content {
+    position: absolute;
+    left: -5555px;
+    z-index: 10;
+    width: 100%;
+    padding: 0 1em;
+    opacity: 0;
+    transition: opacity 250ms ease-out;    
+    
+    &.active {
+      opacity: 1;
+      left: 0px;
+    }
+  
+    form {    
+      position: relative; 
+      max-width: 91em;
+      margin-left: auto;
+      margin-right: auto;
+      background: #fff;
+      border: 1px solid #ededed;
+      box-shadow: 0 4px 9px rgba(0,0,0,.15);
+      padding: .5em;
+      
+      input {
+        width: 75%;
+        display: inline-block;
+      }
+      
+      input[type="submit"] {
+        background-color: $primary-color;
+        color: $white;
+        border: $primary-color-dark;
+        width: 25%;
+        float: right;
+        padding: .75em .25em;
+        line-height: 1.35;
+      }
+    }
+  }  
+}
+
+
+// Off Canvas Login
+// --------------------------------
+.main-navigation-login {
+  float: right;
+  font-size: 1.35em;
+  line-height: 1.9;
+  color: $primary-color-dark;
+}
+
+

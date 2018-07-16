@@ -1,0 +1,50 @@
+//**** ---- ****
+//
+// Wahnbuch elements
+//
+//**** ---- ****
+
+
+// Homepage Section 
+// --------------------------------
+.dienstleister-section-selection .dienstleister-entry-content {
+  
+  span {
+    display: block;
+  }
+  
+  .dl-entry-cat {
+    color: $primary-color-dark;
+    border-bottom: 1px solid $primary-color-dark;
+    max-width: 60%;
+    margin: 2em auto 1em;
+
+    @media only screen and (min-width: $large-max) {
+      margin: 4.25em auto 1.5em;
+    }
+  }
+  
+  h5 {
+    //hyphens: auto;
+  }
+  
+  .dl-entry-region {
+    font-size: .875em;
+    margin-bottom: 0.25em;
+  }
+  
+  .dl-entry-link {
+    color: $primary-color-dark;
+    
+    &:after {
+	  content: "\23";
+	  font-family: 'Hochzeitswahn';
+	  speak: none;
+	  line-height: 1;
+    font-size: .55em;
+    margin-left: 0.6em;
+    -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+    }
+  }  
+}

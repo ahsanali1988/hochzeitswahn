@@ -1,0 +1,273 @@
+//**** ---- ****
+//
+// Footer
+//
+//**** ---- ****
+
+
+// Base styles
+// --------------------------------
+footer {
+  clear: both;
+  border-top: 1px solid #ededed;
+  padding-top: 2.25em;
+}
+
+
+// Top Top Button
+// --------------------------------
+.to-top-btn {
+  display: block;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: .875em;
+  margin: 1.25em 0;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  span {
+    font-size: 2.125em;
+    display: block;
+    margin-top: -0.125em;
+    color: $secondary-color;
+  }
+    
+  @media only screen and (min-width: $medium-min) {
+    width: auto;
+    float: right;
+    font-size: 1.125em;
+  }
+  
+  &:hover {
+    color: $primary-color-dark;
+  }
+}
+
+@media only screen and (min-width: 107.5em) {
+  .js .to-top-btn {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    
+    &.active {
+      opacity: 1;
+    }
+    
+    &.sticky {
+      position: absolute;
+      right: 0;
+      bottom: auto;
+      margin-top: -5rem;
+    }
+  }
+}
+
+
+// Footer Nav row
+// --------------------------------
+.footer-row.nav {
+  overflow: hidden;
+  
+  .footer-newsletter {
+    margin-bottom: 1em;    
+    border: 1px solid #d2d1d1;
+    padding: .5em 1em;
+    text-align: center;
+    
+    .icon-mail {
+      color: $primary-color-dark;
+      display: block;
+      font-size: 2.125em;
+      margin-bottom: .325em;
+    }
+    
+    strong {
+      font-family: $body-font-serif;
+      text-transform: uppercase;
+      font-weight: 300;
+      font-size: 1.5em;
+    }
+    
+    p {
+      margin-bottom: 1.25em
+    }
+    
+    form {
+      overflow: hidden;
+      
+      .email {
+        width: 80%;
+        float: left;
+      }
+      
+      .button {
+        padding: 0.75em 0;
+        width: 20%;
+        display: inline-block;
+        float: right;
+        background-color: $primary-color-dark;
+        color: $white;
+        font-family: 'Hochzeitswahn';
+        line-height: 1;
+      }
+    }    
+  }
+          
+  .footer-navigation {
+    overflow: hidden;
+    text-transform: uppercase;
+    
+    ul {
+      width: 49%;
+      display: inline-block;
+      padding-right: 1em;
+      font-size: .875em;
+      vertical-align: top;
+      
+      @media only screen and (min-width: $medium-min) {
+        width: 32.725%;
+        
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+            
+  .footer-badge {
+    text-align: center;
+  }
+  
+  @media only screen and (min-width: $large-min) {
+    .footer-newsletter, .footer-badge {
+      @include col( 3/12, $gutter: 5);
+    }
+    
+    .footer-newsletter {
+      text-align: center;
+    }
+    
+    .footer-navigation {
+      @include col( 6/12, $gutter: 5);  
+    }
+  }  
+}
+        
+
+// Footer social row
+// --------------------------------
+.footer-social {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+  text-align: center;
+
+  ul {
+    margin-bottom: .25em;
+  }
+  
+  .copyright-info {
+    font-size: .875em;
+    line-height: 1.4;
+    margin-bottom: 3.25em;    
+  }
+  
+  @media only screen and (min-width: $medium-min) {
+    .social-name {
+      margin-bottom: 0;    
+    }
+  }
+  @media only screen and (min-width: $large-min) {
+    .social-name {
+      font-size: 1.25em;
+      text-transform: uppercase; 
+    }
+  }  
+}
+
+
+// Instagram Footer
+// --------------------------------
+.footer-instagram {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0;
+
+  .instagram-link {
+    @extend h3;
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    @media only screen and (min-width: $large-max) {
+      font-size: $h2-font-size;
+    }
+    
+    a {
+      display: inline-block;
+      background-color: rgba(255,255,255,.9);
+      padding: .5em .75em;
+      position: relative;
+      z-index: 1;
+      transition: transform 600ms ease-out;
+      
+      &:before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border: 1px solid #fff;
+        padding: .125em;
+        box-sizing: content-box;
+        position: absolute;
+        z-index: -1;
+        left: -0.125em;
+        top: -0.125em;
+      }
+      
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  
+    small {
+      font-family: $body-font-family;
+      margin-top: .25em;
+      font-size: 50%;
+    }
+  }
+  
+  .footer-instagram-wrapper {
+    width: 115%;
+    
+    .AlpinePhotoTiles_image_list_class {
+      display: block !important;
+      visibility: visible !important;
+    }
+    
+    .AlpinePhotoTiles-tile, .AlpinePhotoTiles-link {
+      width: 12.25% !important;
+      left: auto !important;
+      float: left;
+      padding: 0;
+      margin-left: 2px;
+    }
+    
+    .AlpinePhotoTiles-by-link {
+      display: none !important;
+    }
+    
+    img {
+      display: block;
+      width: 100%;
+    }
+    
+    .AlpinePhotoTiles-row {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,570 @@
+//**** ---- ****
+//
+// Module: Content Blocks
+//
+//**** ---- ****
+
+
+// Basics
+// --------------------------------
+.entry-content div.userpro-float {
+  max-width: 40rem;
+  margin: 0 auto 4rem;
+  padding: 1rem;
+  background: #FDFDFD;
+  border: 1px solid #E5E5E5;
+  
+  form .required {
+    display: inline;
+  }
+}
+
+.userpro-centered-icons {
+  display: none;
+}
+
+
+// Buttons
+// --------------------------------
+input.userpro-button, a.userpro-button, div.userpro div.ajax-file-upload {
+  border-radius: 0px !important;
+  border: none !important;
+  background: $primary-color-dark !important;
+  color: #fff !important;
+  text-shadow: none !important;
+}
+
+input.userpro-button:hover, a.userpro-button:hover {
+  color: #fff !important;
+  border: none !important;
+  background: darken($primary-color-dark, 10%) !important;
+}
+
+input.userpro-button.secondary, a.userpro-button.secondary {
+  color: $primary-color-dark !important;
+  border: 1px solid $primary-color-dark !important;
+  background: $white !important;
+  transition: all 300ms ease !important;
+}
+
+input.userpro-button.secondary:hover, a.userpro-button.secondary:hover {
+  color: #fff !important;
+  border: 1px solid $primary-color-dark !important;
+  background: $primary-color-dark !important;
+  transition: all 300ms ease !important;  
+}
+
+input.userpro-button.red, a.userpro-button.red {
+  border: 1px solid #FDFDFD !important;
+  background-color: transparent !important; 
+  color: $secondary-color !important;
+  transition: all 300ms ease !important;  
+  font-weight: 500;
+}
+
+input.userpro-button.red:hover, a.userpro-button.red:hover {
+  border: 1px solid #FDFDFD !important;
+  background-color: #FDFDFD !important; 
+  color: #d38766 !important;
+}
+
+.userpro a.userpro-small-link {
+  font-weight: 500;
+  border-color: #e6ac92;
+  background-color: #e6ac92 !important;
+  color: $white !important;
+  font-weight: 500;  
+  border-radius: 0 !important;
+  transition: all 300ms ease !important;
+  line-height: 1.8 !important;
+  
+  &:hover {
+    border-color: #d38766 !important;
+    background-color: #d38766 !important;
+  }
+}
+
+
+// Inputs
+// --------------------------------
+div.userpro-input input[type=text], 
+div.userpro-input input[type=password], 
+div.userpro-input textarea {
+  border-radius: 0px !important;
+  background: #f8ebe6 !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #aaa !important;
+  
+  &:focus {
+    background: #f8ebe6 !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #333 !important;
+  }
+}
+
+label.userpro-checkbox br {
+  display: none;
+}
+
+.userpro-label .required + p {
+  position: absolute;
+  top: 5px;
+}
+
+
+// Userpro pages
+// --------------------------------
+.entry-content div.userpro {
+  min-width: 15rem;
+}
+
+@media only screen and (max-width: $small-max) {
+  .page-id-19786 .entry-title {
+    font-size: 1.4rem;
+  }
+
+  div.userpro-centered div.userpro-profile-icons.top {
+    top: -5px;
+    right: 0px;
+  }
+}
+
+
+// Login Modal
+// --------------------------------
+div.userpro-head div.userpro-left {
+  font-size: 1rem !important;
+}
+  
+.userpro-float .userpro-checkbox a {
+  color: $primary-color-dark;
+  
+  &:hover {
+    color: darken($primary-color, 15%);
+  }  
+}
+
+.userpro-float .userpro-checkbox strong {
+  color: $black;
+}
+
+.userpro-body input[data-ajaxcheck="email_exists"] + label {
+  display: none !important;  
+}
+
+div.userpro-overlay-inner div.userpro a.userpro-close-popup {
+  font-weight: 500;
+  background-image: none;
+  padding-right: 0;
+
+  &:after {
+    content: '\2c';
+    font-family: 'Hochzeitswahn';
+    speak: none;
+    font-weight: normal;
+    margin-left: .5em;
+    position: relative;
+    top: 1px;    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;    
+  }
+}
+
+
+// Bookmarking
+// --------------------------------
+.remodal .userpro-bm-btn-contain .userpro-bm-btn.unbookmarked_category {
+  display: none !important;
+}
+
+.entry-content div.userpro-coll {
+  max-width: 40rem;
+  margin: 0 auto 4rem;
+  border: 1px solid #E5E5E5;
+  border-radius: 0;
+  
+  .userpro-coll-item {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+  }
+  
+  .userpro-coll-count a.userpro-bm-btn.bookmarked {
+    width: 125px !important;
+    background: #e6a284 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    
+    &:hover {
+      background: darken(#e6a284, 15%) !important;
+    }
+    
+    @media only screen and (max-width: $small-max) {
+      position: relative;
+    }    
+  }
+  
+  .userpro-coll-abs {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    font-size: 0 !important;
+    width: auto !important;
+    bottom: auto;
+    top: -1px;
+    opacity: .9;
+  
+    &:before {
+    	font-family: 'Hochzeitswahn';
+      content: "\2c";
+	    speak: none;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: .75rem;
+      padding: 0 .75em;
+      color: #d38766;
+    }
+  }
+}
+  
+.userpro-coll-item.item-image {
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0 !important;
+  
+  .userpro-bm-btn.secondary {
+    z-index: 1;
+  }
+}
+
+.userpro-coll-item.item-image .uci-thumb {
+  display: block;
+  width: 100%;
+  
+  img {
+    border-radius: 0;
+    width: 100%;
+  }
+}
+
+.userpro-coll-item.item-image .uci-content {
+  //position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  //background-color: rgba(255,255,255,.8);
+  width: 100%;
+  margin-left: 0 !important;
+  z-index: 10;
+  padding: .5em 0;
+  background-color: $primary-color;
+  color: $white;  
+  
+  @media only screen and (max-width: $small-max) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $small-max) {
+  .userpro-coll-list {
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    
+    //Scrollbar
+    &::-webkit-scrollbar {
+      width: auto;
+      height: 5px;
+      cursor: default;      
+    }
+     
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0px 8px rgba(0,0,0,.05);
+      border-radius: 0;
+      background-color: #F0F0F0;   
+    }
+     
+    &::-webkit-scrollbar-thumb {
+      box-shadow: none; 
+      border-radius: 0;
+      background-color: $primary-color;
+    }
+    
+    &::scrollbar {
+      width: auto;
+      height: 5px;
+      cursor: default;  
+    }
+     
+    &::scrollbar-track {
+      box-shadow: inset 0 0px 8px rgba(0,0,0,.05);
+      border-radius: 0;
+      background-color: #F0F0F0;   
+    }
+     
+    &::scrollbar-thumb {
+      box-shadow: none; 
+      border-radius: 0;
+      background-color: $primary-color;      
+    } 
+    
+    .userpro-icon-caret-left,
+    .userpro-coll-list-count {
+      display: none;
+    }
+  }
+}
+
+
+// Bookmarking Modal
+// --------------------------------
+.fav-modal-window .userpro-bm.is-visible {
+  display: inline-block !important;
+}
+
+.fav-modal-window .userpro-bm-inner {
+  
+  .chosen-container {
+    font-size: 0.875rem;  
+  }
+  
+  .chosen-container-single .chosen-single {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    background: transparent !important;
+    color: $primary-color-dark !important;
+    border-color: $primary-color;
+    box-shadow: none;  
+  }
+  
+  .chosen-container .chosen-results li.highlighted {
+    background-color: $primary-color-dark !important;
+    background-image: none;
+    color: #fff !important;
+  }
+  
+  .userpro-bm-btn-contain {
+    min-width: 50%;
+    margin-bottom: 1.6em !important;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  div.userpro-bm-btn-contain.bm-right {
+    width: 100% !important;
+    float: none !important;
+    clear: both;
+  }
+  
+  .userpro-bm-dialog {
+    position: relative !important;
+    top: 0;
+    margin-top: 2em;
+  }
+  
+  .userpro-bm-dialog-icon.bm-right {
+    display: none;
+  }
+  
+  //Buttons
+  .userpro-bm-btn-contain {
+    .userpro-bm-btn {
+      @extend .button;
+      border-radius: 0 !important;
+      box-shadow: none ! important;
+      border: none !important;  
+      color: #fff !important;
+      
+      &:hover:after {
+        background-color: darken($primary-color, 10%);
+      }
+    }  
+    
+    .userpro-bm-btn.secondary {
+      color: $primary-color-dark !important;
+      
+      &:after {
+        background-color: lighten($primary-color, 15%);
+      }
+      
+      &:hover:after {
+        background-color: lighten($primary-color, 8%);
+      }
+    }
+    
+    .userpro-bm-btn.bookmarked {
+      
+      &:before {
+        display: none;
+      }
+      
+      &:after {
+        background-color: #d56565;
+      }
+      
+      &:hover:after {
+        background-color: darken(#d56565,10%);
+      }
+    }
+    
+  }
+  
+  // New Collection
+  .userpro-bm-dialog.bm-right {
+    box-shadow: none !important;
+    border-color: #ededed;
+    
+    form {
+      input {
+        margin-bottom: 0.8rem !important;
+      }
+      
+      input[type="text"] {
+        border: 1px solid #f8ebe6 !important;
+        background-color: #f8ebe6 !important;
+        padding: .75em .5em !important;
+        outline: 0;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+        -webkit-border-radius: 0 !important;
+        transition: border-color 250ms ease;
+        
+        &:focus {
+          border-color: darken(#f8ebe6, 15%);
+        }
+      }
+      
+      input[type="radio"] {
+        margin-right: .5em;
+      }
+    }
+  }
+  
+  // Switch Heart Image
+  > div:first-child img {
+    display: none;
+    
+    span.userpro-bm-count {
+      font-size: 14px !important;  
+    }
+    
+    + span.userpro-bm-count:before {
+      content: '\30';
+      font-family: 'Hochzeitswahn';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #d56565;
+      font-size: 21px;
+      margin-right: .35em;
+      vertical-align: sub;
+      margin-bottom: .75em;
+      display: inline-block;      
+    }
+  }
+  
+  // Success Message 
+  .autoclose {
+    border: none !important;
+    box-shadow: none !important;
+  	padding: .5em !important;
+  }
+  
+  .userpro-bm-dialog-icon.autoclose {
+    display: none;
+  }
+  
+}
+
+// Bookmarking Page
+// --------------------------------
+#post-19786 .entry-content > .centered-text-block:last-child {
+
+  .content-output {
+    max-width: none;
+  }
+  
+  .userpro-coll {
+    width: 100%;
+    max-width: none;
+  }
+  
+  .userpro-coll-body {
+    .userpro-coll-body-inner {
+      overflow: hidden;
+    }
+    
+    .item-image {
+      width: 50%;
+      float: none;
+      display: inline-block;
+      
+      .uci-thumb {
+        float: none;
+        position: relative;
+      }
+    }
+    
+    .item-image + .userpro-coll-item:not(.item-image) {
+      clear: both;
+    }
+    
+    div.userpro-clear {
+      display: none;
+      clear: none;
+    }    
+  }  
+}
+  
+.flexbox #post-19786 .entry-content > .centered-text-block:last-child .userpro-coll-body-inner {  
+  columns: 250px 2;
+  column-gap: 0.5em;
+  text-align: justify;
+  overflow: visible;
+  
+  .item-image {
+    width: 100%;
+  }
+
+  .userpro-coll-item:not(.item-image) {
+    width: 100%;
+    overflow: hidden;
+    text-align: left;
+    column-span: all;   
+    //column-break-inside: avoid;
+    //-webkit-column-break-inside: avoid;
+    //-moz-column-break-inside: avoid;
+    //-ms-column-break-inside: avoid;
+    //page-break-inside: avoid;
+    float: none;
+  }
+  
+  .userpro-coll-count {    
+    text-align: left;
+    column-span: all;
+    margin-bottom: 1.6rem;
+    
+    .userpro-remove-collection {
+      margin-left: 0.5rem;
+    }
+  }
+  
+  @media only screen and (max-width: 55em) {
+    column-count: 1;
+  }
+}
+
